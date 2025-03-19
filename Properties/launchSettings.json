@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ELY TRAVEL DOC": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
