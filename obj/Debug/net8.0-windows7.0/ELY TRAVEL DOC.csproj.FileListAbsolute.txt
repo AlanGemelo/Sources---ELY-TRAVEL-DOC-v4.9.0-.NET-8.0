@@ -7,16 +7,27 @@ C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\libeay32.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\ssleay32.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ELY TRAVEL DOC.exe
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\FormMRZ.resx
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ELY TRAVEL DOC.dll.config
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ELY TRAVEL DOC.deps.json
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ELY TRAVEL DOC.runtimeconfig.json
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ELY TRAVEL DOC.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ELY TRAVEL DOC.pdb
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\EPPlus.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\FreeImage.Standard.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\LibUsbDotNet.LibUsbDotNet.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.Configuration.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Win32.Registry.AccessControl.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\System.CodeDom.dll
@@ -57,6 +68,7 @@ C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\System.Threading.AccessControl.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\System.Web.Services.Description.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\System.Windows.Extensions.dll
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\System.Xml.XPath.XmlDocument.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\cs\System.Private.ServiceModel.resources.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\de\System.Private.ServiceModel.resources.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\es\System.Private.ServiceModel.resources.dll
@@ -136,18 +148,19 @@ C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\Wsq2Bmp.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ElyMRTDDotNet.pdb
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\bin\Debug\net8.0-windows7.0\ElySCardDotNet.pdb
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormMRZ.resources
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormOptions.resources
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormReadingChip.resources
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.MainForm.resources
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormPasswordPACE.resources
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.Properties.Resources.resources
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.csproj.GenerateResource.cache
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.csproj.CoreCompileInputs.cache
+C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.sourcelink.json
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAV.BD13399C.Up2Date
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\refint\ELY TRAVEL DOC.dll
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.pdb
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY TRAVEL DOC.genruntimeconfig.cache
 C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ref\ELY TRAVEL DOC.dll
-C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormMRZ.resources
-C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormOptions.resources
-C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormReadingChip.resources
-C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.MainForm.resources
-C:\Users\gemelo\Desktop\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\obj\Debug\net8.0-windows7.0\ELY_TRAVEL_DOC.FormPasswordPACE.resources

@@ -92,7 +92,7 @@ namespace ELY_TRAVEL_DOC
         private void ShowAppVersion()
         {
             System.Reflection.AssemblyName aName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
-            this.Text = "Grupo Santoro v" + aName.Version.Major.ToString(CultureInfo.CurrentCulture) +
+            this.Text += " v" + aName.Version.Major.ToString(CultureInfo.CurrentCulture) +
                 "." + aName.Version.Minor.ToString(CultureInfo.CurrentCulture) +
                 "." + aName.Version.Build.ToString(CultureInfo.CurrentCulture);
             if (aName.Version.Revision != 0)
@@ -649,7 +649,7 @@ namespace ELY_TRAVEL_DOC
                 {
                     file.WriteLine(
                         "(MRZ)L1,(MRZ)L2,(MRZ)L3,"+
-                        "(DG1)Name,(DG1)Surname,(DG1)Birth Date,(DG1)Nationality,(DG1)Gender,(DG1)Expiry Date,(DG1)Document Number,(DG1)Document Type,(DG1),(DG1)Issuing State,(DG1)Optional Data," +
+                        "(DG1)Name,(DG1)Surname,(DG1)Birth Date,(DG1)Nationality,(DG1)Gender,(DG1)Expiry Date,(DG1)Document Number,(DG1)Document Type,(DG1)Issuing State,(DG1)Optional Data," +
                         "(DG11_5F0E)Full name,(DG11_5F10)Personal Number,(DG11_5F2B)Long Birth Date,(DG11_5F11)Birth Place,(DG11_5F42)Residence,(DG11_5F12)Phone Number," +
                         "(DG11_5F13)Profession,(DG11_5F14)Title,(DG11_5F15)Personal summary,(DG11_5F17)Other valid TD numbers,(DG11_5F18)Custody info," +
                         "(DG12_5F19)Issuing Authority,(DG12_5F26)Delivery Date,(DG12_5F1B)Endorsements and Observations," +

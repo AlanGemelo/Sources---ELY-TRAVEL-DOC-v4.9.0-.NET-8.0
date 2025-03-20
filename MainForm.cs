@@ -12,6 +12,7 @@ using System.Collections;
 using System.Linq.Expressions;
 using System.Threading;
 using static ElyMRTDDotNet.ElyMRTDDotNet;
+using ELY_TRAVEL_DOC.Services;
 
 namespace ELY_TRAVEL_DOC
 {
@@ -65,12 +66,19 @@ namespace ELY_TRAVEL_DOC
         Thread ThreadEmrtdTest; // Thread for eMRTD test
         #endregion
 
+        private readonly MrzService mrzService;
+        private readonly ChipService chipService;
+        private readonly ExcelExportService excelExportService = new ExcelExportService();
+        private readonly FilterService filterService = new FilterService();
+        private List<string> selectedFields = new List<string>();
+
+        private List<PersonalDataDto> personalDataList = new List<PersonalDataDto>();
 
         #region Constructor
         public MainForm()
         {
             InitializeComponent();
-            this.Icon = new Icon("icon.ico");
+            this.Icon = new Icon("assets/icon.ico");
             InitializeGuiHelpers();
 
             elyMrtd = new ElyMRTDDotNet.ElyMRTDDotNet();
@@ -112,6 +120,13 @@ namespace ELY_TRAVEL_DOC
             catch (Exception exc) { Console.WriteLine("Error: %s" + exc.Message); }
             if (formOptions.checkboxEmrtdTest.Checked)
                 SetEmrtdTest(true);
+
+            mrzService = new MrzService();
+            chipService = new ChipService();
+
+            buttonExportExcel.Click += ButtonExportExcel_Click;
+            comboBoxFields.Items.AddRange(new string[] { "Name", "Surname", "BirthDate", "Nationality", "Sex", "ExpiryDate", "DocumentNumber", "DocumentType", "Issuer", "OptionalData" });
+            comboBoxFields.SelectedIndexChanged += ComboBoxFields_SelectedIndexChanged;
         }
         #endregion
 
@@ -2422,6 +2437,57 @@ namespace ELY_TRAVEL_DOC
                 }
             }
         }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            // Guardar los datos en el DTO
+            var personalData = new PersonalDataDto
+            {
+                Name = textBoxName.Text,
+                Surname = textBoxSurname.Text,
+                BirthDate = textBoxBirthDate.Text,
+                Nationality = textBoxNationality.Text,
+                Sex = textBoxSex.Text,
+                ExpiryDate = textBoxExpiryDate.Text,
+                DocumentNumber = textBoxDocumentNumber.Text,
+                DocumentType = textBoxDocumentType.Text,
+                Issuer = textBoxIssuer.Text,
+                OptionalData = textBoxOptionalData.Text
+            };
+
+            // Limpiar los datos obtenidos del escaneo anterior
+            textBoxName.Text = string.Empty;
+            textBoxSurname.Text = string.Empty;
+            textBoxBirthDate.Text = string.Empty;
+            textBoxNationality.Text = string.Empty;
+            textBoxSex.Text = string.Empty;
+            textBoxExpiryDate.Text = string.Empty;
+            textBoxDocumentNumber.Text = string.Empty;
+            textBoxDocumentType.Text = string.Empty;
+            textBoxIssuer.Text = string.Empty;
+            textBoxOptionalData.Text = string.Empty;
+
+            // Agregar los datos a la lista
+            personalDataList.Add(personalData);
+        }
+
+        private void ComboBoxFields_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedFields = comboBoxFields.CheckedItems.Cast<string>().ToList();
+        }
+
+        private void ButtonExportExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Files|*.xlsx";
+            saveFileDialog.Title = "Save an Excel File";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
+                excelExportService.ExportPersonalDataToExcel(filteredData, selectedFields, saveFileDialog.FileName);
+                MessageBox.Show("Data exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         #endregion
 
 
@@ -2472,5 +2538,19 @@ namespace ELY_TRAVEL_DOC
             }
         }
         #endregion
+    }
+
+    public class PersonalDataDto
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string BirthDate { get; set; }
+        public string Nationality { get; set; }
+        public string Sex { get; set; }
+        public string ExpiryDate { get; set; }
+        public string DocumentNumber { get; set; }
+        public string DocumentType { get; set; }
+        public string Issuer { get; set; }
+        public string OptionalData { get; set; }
     }
 }

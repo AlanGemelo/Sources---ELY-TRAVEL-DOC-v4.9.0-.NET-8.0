@@ -98,6 +98,9 @@
             textBoxDocumentType = new System.Windows.Forms.TextBox();
             textBoxIssuer = new System.Windows.Forms.TextBox();
             textBoxOptionalData = new System.Windows.Forms.TextBox();
+            buttonAceptar = new System.Windows.Forms.Button();
+            buttonExportExcel = new System.Windows.Forms.Button();
+            comboBoxFields = new System.Windows.Forms.CheckedListBox();
             tabPageIDL = new System.Windows.Forms.TabPage();
             groupBoxAccessControlIDL = new System.Windows.Forms.GroupBox();
             tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -281,12 +284,13 @@
             // 
             tabPageID.BackColor = System.Drawing.Color.White;
             tabPageID.Controls.Add(groupBoxAntenna);
-            // tabPageID.Controls.Add(groupBoxAccessControl);
+            tabPageID.Controls.Add(groupBoxAccessControl);
             tabPageID.Controls.Add(groupBoxPicture);
             tabPageID.Controls.Add(groupBoxPersonalData);
+            tabPageID.Controls.Add(buttonAceptar);
+            tabPageID.Controls.Add(buttonExportExcel);
+            tabPageID.Controls.Add(comboBoxFields);
             tabPageID.Location = new System.Drawing.Point(4, 22);
-            tabPageID.Name = "tabPageID";
-            tabPageID.Padding = new System.Windows.Forms.Padding(3);
             tabPageID.Size = new System.Drawing.Size(814, 324);
             tabPageID.TabIndex = 0;
             tabPageID.Text = "  eID/ePP ";
@@ -303,6 +307,7 @@
             groupBoxAntenna.TabIndex = 3;
             groupBoxAntenna.TabStop = false;
             groupBoxAntenna.Text = "Antenna";
+            groupBoxAntenna.Visible = false;
             // 
             // buttonUpdateAntenna
             // 
@@ -386,6 +391,7 @@
             groupBoxAccessControl.TabIndex = 2;
             groupBoxAccessControl.TabStop = false;
             groupBoxAccessControl.Text = "Access Control";
+            groupBoxAccessControl.Visible = false;
             // 
             // tableLayoutPanel3
             // 
@@ -1133,6 +1139,33 @@
             textBoxOptionalData.ReadOnly = true;
             textBoxOptionalData.Size = new System.Drawing.Size(164, 21);
             textBoxOptionalData.TabIndex = 19;
+            // 
+            // buttonAceptar
+            // 
+            buttonAceptar.Location = new System.Drawing.Point(600, 300);
+            buttonAceptar.Name = "buttonAceptar";
+            buttonAceptar.Size = new System.Drawing.Size(75, 23);
+            buttonAceptar.TabIndex = 1;
+            buttonAceptar.Text = "Aceptar";
+            buttonAceptar.UseVisualStyleBackColor = true;
+            buttonAceptar.Click += new System.EventHandler(buttonAceptar_Click);
+            // 
+            // buttonExportExcel
+            // 
+            buttonExportExcel.Location = new System.Drawing.Point(700, 300);
+            buttonExportExcel.Name = "buttonExportExcel";
+            buttonExportExcel.Size = new System.Drawing.Size(100, 23);
+            buttonExportExcel.TabIndex = 2;
+            buttonExportExcel.Text = "Export to Excel";
+            buttonExportExcel.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxFields
+            // 
+            comboBoxFields.FormattingEnabled = true;
+            comboBoxFields.Location = new System.Drawing.Point(590, 14);
+            comboBoxFields.Name = "comboBoxFields";
+            comboBoxFields.Size = new System.Drawing.Size(210, 182);
+            comboBoxFields.TabIndex = 3;
             // 
             // tabPageIDL
             // 
@@ -2475,6 +2508,9 @@
         private System.Windows.Forms.ComboBox comboBoxCcidReaders;
         private System.Windows.Forms.Button buttonUpdateAntenna;
         private System.Windows.Forms.Label labelElyMrtdDllVersion;
+        private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.Button buttonExportExcel;
+        private System.Windows.Forms.CheckedListBox comboBoxFields;
     }
 }
 
