@@ -467,7 +467,7 @@
             // 
             label22.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label22.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            label22.ForeColor = System.Drawing.SystemColors.ControlDark;
+            // label22.ForeColor = System.Windows.Forms.SystemColors.ControlDark;
             label22.Location = new System.Drawing.Point(20, 104);
             label22.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             label22.Name = "label22";
@@ -1166,6 +1166,7 @@
             comboBoxFields.Name = "comboBoxFields";
             comboBoxFields.Size = new System.Drawing.Size(210, 182);
             comboBoxFields.TabIndex = 3;
+            comboBoxFields.Text = "Preferencias para exportar";
             // 
             // tabPageIDL
             // 
@@ -2114,7 +2115,7 @@
             // 
             // buttonLastLog
             // 
-            buttonLastLog.Enabled = false;
+            buttonLastLog.Enabled = true;
             buttonLastLog.Location = new System.Drawing.Point(8, 145);
             buttonLastLog.Name = "buttonLastLog";
             buttonLastLog.Size = new System.Drawing.Size(192, 22);
@@ -2125,15 +2126,16 @@
             // 
             // buttonOptions
             // 
+            buttonOptions.Enabled = false;
             buttonOptions.Location = new System.Drawing.Point(8, 120);
             buttonOptions.Name = "buttonOptions";
             buttonOptions.Size = new System.Drawing.Size(192, 21);
-            buttonOptions.TabIndex = 4;
-            buttonOptions.Text = "&Options";
+            buttonOptions.TabIndex = 1;
+            buttonOptions.Text = "Options";
             buttonOptions.UseVisualStyleBackColor = true;
-            buttonOptions.Click += buttonOptions_Click;
-            buttonOptions.MouseEnter += buttonOptions_MouseEnter;
-            buttonOptions.MouseLeave += buttonOptions_MouseLeave;
+            // buttonOptions.Click += new System.EventHandler(buttonOptions_Click);
+            // buttonOptions.MouseEnter += buttonOptions_MouseEnter;
+            // buttonOptions.MouseLeave += buttonOptions_MouseLeave;
             // 
             // labelContactlessFwVersion
             // 
@@ -2264,7 +2266,7 @@
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = " ELY TRAVEL DOC";
+            Text = "Lector Grupo Santoro";
             Load += MainForm_Load;
             MouseEnter += MainForm_MouseEnter;
             tabControl1.ResumeLayout(false);

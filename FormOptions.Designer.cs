@@ -747,7 +747,9 @@
             groupBox6.Size = new System.Drawing.Size(304, 57);
             groupBox6.TabIndex = 5;
             groupBox6.TabStop = false;
-            groupBox6.Text = "Card configuration";
+            groupBox6.Text = "Configuration";
+            buttonOK.Enabled = false;
+
             // 
             // comboBoxMaxLe
             // 
@@ -826,6 +828,7 @@
             groupBox5.PerformLayout();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
+
             ResumeLayout(false);
         }
 

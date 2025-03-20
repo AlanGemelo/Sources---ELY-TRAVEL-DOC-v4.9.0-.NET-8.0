@@ -2440,7 +2440,13 @@ namespace ELY_TRAVEL_DOC
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            // Guardar los datos en el DTO
+            SavePersonalData();
+            ClearPersonalDataForm();
+            ClearPicture();
+        }
+
+        private void SavePersonalData()
+        {
             var personalData = new PersonalDataDto
             {
                 Name = textBoxName.Text,
@@ -2455,7 +2461,11 @@ namespace ELY_TRAVEL_DOC
                 OptionalData = textBoxOptionalData.Text
             };
 
-            // Limpiar los datos obtenidos del escaneo anterior
+            personalDataList.Add(personalData);
+        }
+
+        private void ClearPersonalDataForm()
+        {
             textBoxName.Text = string.Empty;
             textBoxSurname.Text = string.Empty;
             textBoxBirthDate.Text = string.Empty;
@@ -2466,9 +2476,11 @@ namespace ELY_TRAVEL_DOC
             textBoxDocumentType.Text = string.Empty;
             textBoxIssuer.Text = string.Empty;
             textBoxOptionalData.Text = string.Empty;
+        }
 
-            // Agregar los datos a la lista
-            personalDataList.Add(personalData);
+        private void ClearPicture()
+        {
+            pictureBoxPicture.Image = null;
         }
 
         private void ComboBoxFields_SelectedIndexChanged(object sender, EventArgs e)
