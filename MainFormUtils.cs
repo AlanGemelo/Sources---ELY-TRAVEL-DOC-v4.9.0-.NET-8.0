@@ -932,9 +932,28 @@ namespace ELY_TRAVEL_DOC
         private void ShowFormReadingChip()
         {
             formReadingChip.ShowDialog();
+                TranslateFormReadingChip(); // Traduce el texto del formulario
+
             StartAutoFormCloseTimer();  // Auto close "Reading chip form"
         }
-
+private void TranslateFormReadingChip()
+{
+    if (formReadingChip != null)
+    {
+        switch (_language)
+        {
+            case "es":
+                formReadingChip.Text = "Leyendo chip...";
+                break;
+            case "fr":
+                formReadingChip.Text = "Lecture de la puce...";
+                break;
+            case "en":
+            default:
+                formReadingChip.Text = "Reading chip...";
+                break;
+        }
+    }}
         private void HideFormReadingChip()
         {
             StopAutoFormCloseTimer();

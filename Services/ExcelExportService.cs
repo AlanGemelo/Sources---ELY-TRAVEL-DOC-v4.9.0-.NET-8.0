@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 using OfficeOpenXml;
 
 namespace ELY_TRAVEL_DOC.Services
@@ -9,103 +10,61 @@ namespace ELY_TRAVEL_DOC.Services
     {
         public void ExportPersonalDataToExcel(List<PersonalDataDto> personalDataList, List<string> selectedFields, string filePath)
         {
+            var fieldMappings = new Dictionary<string, string>
+            {
+            { "Nombre", "Name" },
+            { "Apellido", "Surname" },
+            { "Fecha de Nacimiento", "BirthDate" },
+            { "Nacionalidad", "Nationality" },
+            { "Sexo", "Sex" },
+            { "Fecha de Expiración", "ExpiryDate" },
+            { "Número de Documento", "DocumentNumber" },
+            { "Tipo de Documento", "DocumentType" },
+            { "Emisor", "Issuer" },
+            { "Datos Opcionales", "OptionalData" },
+            { "Name", "Name" },
+            { "Surname", "Surname" },
+            { "Birth Date", "BirthDate" },
+            { "Nationality", "Nationality" },
+            { "Sex", "Sex" },
+            { "Expiry Date", "ExpiryDate" },
+            { "Document Number", "DocumentNumber" },
+            { "Document Type", "DocumentType" },
+            { "Issuer", "Issuer" },
+            { "Optional Data", "OptionalData" },
+            { "Nom", "Name" },
+            { "Prénom", "Surname" },
+            { "Date de naissance", "BirthDate" },
+            { "Nationalité", "Nationality" },
+            { "Sexe", "Sex" },
+            { "Date d'expiration", "ExpiryDate" },
+            { "Numéro de document", "DocumentNumber" },
+            { "Type de document", "DocumentType" },
+            { "Émetteur", "Issuer" },
+            { "Données optionnelles", "OptionalData" }
+            };
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (var package = new ExcelPackage())
             {
-                var worksheet = package.Workbook.Worksheets.Add("PersonalData");
+            var worksheet = package.Workbook.Worksheets.Add("PersonalData");
 
-                int columnIndex = 1;
-                if (selectedFields.Contains("Name"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "Name";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].Name;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("Surname"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "Surname";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].Surname;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("BirthDate"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "BirthDate";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].BirthDate;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("Nationality"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "Nationality";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].Nationality;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("Sex"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "Sex";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].Sex;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("ExpiryDate"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "ExpiryDate";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].ExpiryDate;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("DocumentNumber"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "DocumentNumber";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].DocumentNumber;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("DocumentType"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "DocumentType";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].DocumentType;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("Issuer"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "Issuer";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].Issuer;
-                    }
-                    columnIndex++;
-                }
-                if (selectedFields.Contains("OptionalData"))
-                {
-                    worksheet.Cells[1, columnIndex].Value = "OptionalData";
-                    for (int i = 0; i < personalDataList.Count; i++)
-                    {
-                        worksheet.Cells[i + 2, columnIndex].Value = personalDataList[i].OptionalData;
-                    }
-                    columnIndex++;
-                }
+            int columnIndex = 1;
+            foreach (var field in selectedFields)
+            {
+                var normalizedField = fieldMappings.ContainsKey(field) ? fieldMappings[field] : null;
+                if (normalizedField == null) continue;
 
-                package.SaveAs(new FileInfo(filePath));
+                worksheet.Cells[1, columnIndex].Value = field; // Use original field name for header
+                for (int i = 0; i < personalDataList.Count; i++)
+                {
+                var value = typeof(PersonalDataDto).GetProperty(normalizedField)?.GetValue(personalDataList[i], null);
+                worksheet.Cells[i + 2, columnIndex].Value = value ?? null; // Ensure no empty values
+                }
+                columnIndex++;
+            }
+
+            package.SaveAs(new FileInfo(filePath));
             }
         }
     }

@@ -81,10 +81,10 @@ namespace ELY_TRAVEL_DOC
         #region Constructor
         public MRZForm(string language)
         {
-            
+
             InitializeComponent();
-                _language = language;
-       
+            _language = language;
+
             this.Icon = new Icon("assets/icon.ico");
             InitializeGuiHelpers();
 
@@ -135,14 +135,67 @@ namespace ELY_TRAVEL_DOC
             buttonExportJson.Click += ButtonExportJson_Click;
             comboBoxFields.Items.AddRange(new string[] { "Name", "Surname", "BirthDate", "Nationality", "Sex", "ExpiryDate", "DocumentNumber", "DocumentType", "Issuer", "OptionalData" });
             comboBoxFields.SelectedIndexChanged += ComboBoxFields_SelectedIndexChanged;
-
+            // Marcar todos los ítems después de inicializar
+            for (int i = 0; i < comboBoxFields.Items.Count; i++)
+            {
+                comboBoxFields.SetItemChecked(i, true);
+            }
+            selectedFields = comboBoxFields.CheckedItems.Cast<string>().ToList();
             TranslateUI();
         }
         #endregion
 
+private Dictionary<string, string> GetFieldMappings()
+{
+    switch (_language)
+    {
+        case "es":
+            return new Dictionary<string, string>
+            {
+                { "Name", "Nombre" },
+                { "Surname", "Apellido" },
+                { "BirthDate", "Fecha de Nacimiento" },
+                { "Nationality", "Nacionalidad" },
+                { "Sex", "Sexo" },
+                { "ExpiryDate", "Fecha de Expiración" },
+                { "DocumentNumber", "Número de Documento" },
+                { "DocumentType", "Tipo de Documento" },
+                { "Issuer", "Emisor" },
+                { "OptionalData", "Datos Opcionales" }
+            };
+        case "fr":
+            return new Dictionary<string, string>
+            {
+                { "Name", "Nom" },
+                { "Surname", "Prénom" },
+                { "BirthDate", "Date de Naissance" },
+                { "Nationality", "Nationalité" },
+                { "Sex", "Sexe" },
+                { "ExpiryDate", "Date d'Expiration" },
+                { "DocumentNumber", "Numéro de Document" },
+                { "DocumentType", "Type de Document" },
+                { "Issuer", "Émetteur" },
+                { "OptionalData", "Données Optionnelles" }
+            };
+        default: // inglés
+            return new Dictionary<string, string>
+            {
+                { "Name", "Name" },
+                { "Surname", "Surname" },
+                { "BirthDate", "Birth Date" },
+                { "Nationality", "Nationality" },
+                { "Sex", "Sex" },
+                { "ExpiryDate", "Expiry Date" },
+                { "DocumentNumber", "Document Number" },
+                { "DocumentType", "Document Type" },
+                { "Issuer", "Issuer" },
+                { "OptionalData", "Optional Data" }
+            };
+    }
+}
         private void TranslateUI()
         {
-                TranslateComboBoxFields();
+            TranslateComboBoxFields();
 
 
             switch (_language)
@@ -157,64 +210,16 @@ namespace ELY_TRAVEL_DOC
                     TranslateToFrench();
                     break;
             }
+            TranslateFormReadingChip();
+
         }
 
-private void TranslateComboBoxFields()
-{
-    comboBoxFields.Items.Clear();
-    
-    switch (_language)
-    {
-        case "es":
-            comboBoxFields.Items.AddRange(new string[] { 
-                "Nombre", 
-                "Apellido", 
-                "Fecha de Nacimiento", 
-                "Nacionalidad", 
-                "Sexo", 
-                "Fecha de Expiración", 
-                "Número de Documento", 
-                "Tipo de Documento", 
-                "Emisor", 
-                "Datos Opcionales"
-            });
-            break;
-            
-        case "en":
-            comboBoxFields.Items.AddRange(new string[] { 
-                "Name", 
-                "Surname", 
-                "Birth Date", 
-                "Nationality", 
-                "Sex", 
-                "Expiry Date", 
-                "Document Number", 
-                "Document Type", 
-                "Issuer", 
-                "Optional Data"
-            });
-            break;
-            
-        case "fr":
-            comboBoxFields.Items.AddRange(new string[] {
-                "Nom",
-                "Prénom",
-                "Date de naissance",
-                "Nationalité",
-                "Sexe",
-                "Date d'expiration",
-                "Numéro de document",
-                "Type de document",
-                "Émetteur",
-                "Données optionnelles"
-            });
-            break;
-    }}
+
 
         private void TranslateToSpanish()
         {
             this.Text = "Formulario MRZ";
-            
+
             buttonAceptar.Text = "Aceptar";
             buttonExportExcel.Text = "Exportar a Excel";
             buttonExportJson.Text = "Exportar a JSON";
@@ -229,20 +234,34 @@ private void TranslateComboBoxFields()
             label8.Text = "Tipo de Documento";
             label9.Text = "Emisor";
             label10.Text = "Datos Opcionales";
-             groupBoxConfiguration.Text = "Configuración";
-    buttonRead.Text = "Leer";
-    buttonOptions.Text = "Opciones";
-    buttonUpdateAntenna.Text = "Actualizar Antena";
-    
-    
-    
+            groupBoxConfiguration.Text = "Configuración";
+            buttonRead.Text = "Leer";
+            buttonOptions.Text = "Opciones";
+            buttonUpdateAntenna.Text = "Actualizar Antena";
+            label11.Text = "Detectar MRZ";
+            label12.Text = "Leer MRZ";
+            label13.Text = "Detectar Chip";
+            label14.Text = "Leer Chip";
+            groupBoxReadingState.Text = "Estado de Lectura";
 
 
-    // Lectura
-    // groupBoxReading.Text = "Lectura";
-    buttonLastLog.Text = "Último Registro";
-    
-    
+            // Grupo de Configuración
+            groupBoxConfiguration.Text = "Configuración";
+            labelContactlessDriver.Text = "Controlador sin contacto";
+            labelContactlessFwVersion.Text = "Versión del firmware sin contacto";
+            labelIdBoxSerialNumber.Text = "Número de serie de la caja de identificación";
+            labelScannerFwVersion.Text = "Versión del firmware del escáner";
+
+            // Grupo de Logs
+            groupBoxLogs.Text = "Registros";
+            label40.Text = "Detalles del registro";
+
+            groupBoxPicture.Text = "Imagen ";
+
+            // Lectura
+            // groupBoxReading.Text = "Lectura";
+            buttonLastLog.Text = "Último Registro";
+
             // ...traduce otros elementos...
         }
 
@@ -263,14 +282,40 @@ private void TranslateComboBoxFields()
             label8.Text = "Document Type";
             label9.Text = "Issuer";
             label10.Text = "Optional Data";
-                groupBoxConfiguration.Text = "Configuration";
-    buttonRead.Text = "Read";
-    buttonOptions.Text = "Options";
-    buttonUpdateAntenna.Text = "Update Antenna";
+            groupBoxConfiguration.Text = "Configuration";
+            buttonRead.Text = "Read";
+            buttonOptions.Text = "Options";
+            buttonUpdateAntenna.Text = "Update Antenna";
 
-    // Reading
-    // groupBoxReading.Text = "Reading";
-    buttonLastLog.Text = "Last Log";
+            // Image navigation buttons
+            buttonImageLeft.Text = "Previous Image";
+            buttonImageRight.Text = "Next Image";
+
+            // Image group
+            groupBoxPicture.Text = "Image";
+
+            // Reading
+            // groupBoxReading.Text = "Reading";
+            groupBoxReadingState.Text = "Reading State";
+
+
+            buttonLastLog.Text = "Last Log";
+            label11.Text = "Detect MRZ";
+            label12.Text = "Read MRZ";
+            label13.Text = "Detect Chip";
+            label14.Text = "Read Chip";
+
+            // Configuration Group
+            groupBoxConfiguration.Text = "Configuration";
+            labelContactlessDriver.Text = "Contactless Driver";
+            labelContactlessFwVersion.Text = "Contactless Firmware Version";
+            labelIdBoxSerialNumber.Text = "ID Box Serial Number";
+            labelScannerFwVersion.Text = "Scanner Firmware Version";
+
+
+            // Logs Group
+            groupBoxLogs.Text = "Logs";
+            label40.Text = "Log Details";
             // ...translate other elements...
         }
 
@@ -291,14 +336,37 @@ private void TranslateComboBoxFields()
             label8.Text = "Type de Document";
             label9.Text = "Émetteur";
             label10.Text = "Données Optionnelles";
-             groupBoxConfiguration.Text = "Configuration";
-    buttonRead.Text = "Lire";
-    buttonOptions.Text = "Options";
-    buttonUpdateAntenna.Text = "Mettre à jour Antenne";
+            groupBoxConfiguration.Text = "Configuration";
+            buttonRead.Text = "Lire";
+            buttonOptions.Text = "Options";
+            buttonUpdateAntenna.Text = "Mettre à jour Antenne";
 
-    // Lecture
-    // groupBoxReading.Text = "Lecture";
-    buttonLastLog.Text = "Dernier Journal";
+            label11.Text = "Détecter MRZ";
+            label12.Text = "Lire MRZ";
+            label13.Text = "Détecter Puce";
+            label14.Text = "Lire Puce";
+            groupBoxReadingState.Text = "État de Lecture";
+            buttonImageLeft.Text = "Image Précédente";
+            buttonImageRight.Text = "Image Suivante";
+
+            // Groupe de l'image
+            groupBoxPicture.Text = "Image";
+
+
+            // Groupe de Configuration
+            groupBoxConfiguration.Text = "Configuration";
+            labelContactlessDriver.Text = "Pilote sans contact";
+            labelContactlessFwVersion.Text = "Version du firmware sans contact";
+            labelIdBoxSerialNumber.Text = "Numéro de série de la boîte d'identification";
+            labelScannerFwVersion.Text = "Version du firmware du scanner";
+
+
+            // Groupe de Logs
+            groupBoxLogs.Text = "Journaux";
+            label40.Text = "Détails du journal";
+            // Lecture
+            // groupBoxReading.Text = "Lecture";
+            buttonLastLog.Text = "Dernier Journal";
             // ...traduire d'autres éléments...
         }
 
@@ -334,10 +402,9 @@ private void TranslateComboBoxFields()
         private void MRZForm_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < comboBoxFields.Items.Count; i++)
-    {
-        comboBoxFields.SetItemChecked(i, true);
-    }
-            MessageBox.Show($"Idioma seleccionado: {_language}");
+            {
+                comboBoxFields.SetItemChecked(i, true);
+            }
 
             ShowAppVersion();
         }
@@ -394,7 +461,8 @@ private void TranslateComboBoxFields()
                     if (IsDocTypeD())
                     {
                         // MRZ password length for Driving License is 28 digits
-                        if (szMrzPwd.Length != MRZ_PWD_LEN_IDL) {
+                        if (szMrzPwd.Length != MRZ_PWD_LEN_IDL)
+                        {
                             PrintListView("Warning: Invalid MRZ password");
                             this.pictureBoxMRZDetected.Image = ELY_TRAVEL_DOC.Properties.Resources.fail;
                             this.pictureBoxMRZRead.Image = ELY_TRAVEL_DOC.Properties.Resources.warning;
@@ -402,9 +470,12 @@ private void TranslateComboBoxFields()
                         else
                         {
                             this.pictureBoxMRZDetected.Image = ELY_TRAVEL_DOC.Properties.Resources.success;
-                            if (elyMrzParser.IsCheckDigitOfOverAllMrzValid()) {
+                            if (elyMrzParser.IsCheckDigitOfOverAllMrzValid())
+                            {
                                 this.pictureBoxMRZRead.Image = ELY_TRAVEL_DOC.Properties.Resources.success;
-                            } else {
+                            }
+                            else
+                            {
                                 PrintListView("Warning: Invalid MRZ checksum");
                                 this.pictureBoxMRZRead.Image = ELY_TRAVEL_DOC.Properties.Resources.warning;
                             }
@@ -436,7 +507,8 @@ private void TranslateComboBoxFields()
                                 // Some document samples may have wrong checkdigit for the overall MRZ. Enable this, if required.
                                 elyMrzParser.IsCheckDigitOfDocNumValid() &&
                                 elyMrzParser.IsCheckDigitOfDobValid() &&
-                                elyMrzParser.IsCheckDigitOfDoeValid()) {
+                                elyMrzParser.IsCheckDigitOfDoeValid())
+                            {
                                 this.pictureBoxMRZRead.Image = ELY_TRAVEL_DOC.Properties.Resources.success;
                             }
                             else
@@ -507,7 +579,8 @@ private void TranslateComboBoxFields()
                 if (!szScardReader.Equals("") && !szScardReader.Equals("0"))
                 {
                     DialogResult result = DialogResult.None;
-                    if (IsEppOnIdBox5xxOr6xx(m_szMrz)) {
+                    if (IsEppOnIdBox5xxOr6xx(m_szMrz))
+                    {
                         result = ShowMessageBoxToPlaceEppOnIdBox5xxOr6xx();
                     }
                     m_readerState[0].szReader = szScardReader;
@@ -546,6 +619,67 @@ private void TranslateComboBoxFields()
 
             return false;
         }
+        private void TranslateComboBoxFields()
+        {
+            comboBoxFields.Items.Clear();
+
+            switch (_language)
+            {
+                case "es":
+                    comboBoxFields.Items.AddRange(new string[] {
+                "Nombre",
+                "Apellido",
+                "Fecha de Nacimiento",
+                "Nacionalidad",
+                "Sexo",
+                "Fecha de Expiración",
+                "Número de Documento",
+                "Tipo de Documento",
+                "Emisor",
+                "Datos Opcionales"
+            });
+                    break;
+
+                case "en":
+                    comboBoxFields.Items.AddRange(new string[] {
+                "Name",
+                "Surname",
+                "Birth Date",
+                "Nationality",
+                "Sex",
+                "Expiry Date",
+                "Document Number",
+                "Document Type",
+                "Issuer",
+                "Optional Data"
+            });
+                    break;
+
+                case "fr":
+                    comboBoxFields.Items.AddRange(new string[] {
+                "Nom",
+                "Prénom",
+                "Date de naissance",
+                "Nationalité",
+                "Sexe",
+                "Date d'expiration",
+                "Numéro de document",
+                "Type de document",
+                "Émetteur",
+                "Données optionnelles"
+            });
+                    break;
+
+            }
+            for (int i = 0; i < comboBoxFields.Items.Count; i++)
+            {
+                comboBoxFields.SetItemChecked(i, true);
+            }
+
+            // Actualizar la lista de campos seleccionados
+            selectedFields = comboBoxFields.CheckedItems.Cast<string>().ToList();
+        }
+
         #endregion
 
 
@@ -942,7 +1076,7 @@ private void TranslateComboBoxFields()
                     }
                     else if (IsAppletTypeIdl())
                     {
-                       
+
                         // [TODO]: elyMrzParser for IDL will be added later
 
                         if (formOptions.checkBoxCSV.Checked)
@@ -1004,11 +1138,11 @@ private void TranslateComboBoxFields()
                     ActiveAuthentication();
                 if (formOptions.checkBoxCA.Checked)
                     ChipAuthentication();
-                    /*if (!ChipAuthentication())
-                    {
-                        e.Result = new object[] { 0 };
-                        break;
-                    }*/
+                /*if (!ChipAuthentication())
+                {
+                    e.Result = new object[] { 0 };
+                    break;
+                }*/
 
                 GetInfoMandatoryDgs();
                 GetInfoOptionalDgs();
@@ -1260,8 +1394,8 @@ private void TranslateComboBoxFields()
         private void GetInfoMandatoryDgs()
         {
             GetInfosDg1();
-                // As per ICAO spec: Machine Readable Zone Information
-                // As per ISO 18013 spec: Demographic data and endorsement/restriction information
+            // As per ICAO spec: Machine Readable Zone Information
+            // As per ISO 18013 spec: Demographic data and endorsement/restriction information
 
             if (!IsAppletTypeIdl())
             {
@@ -1348,7 +1482,7 @@ private void TranslateComboBoxFields()
             if (iRes >= 0)
             {
                 // Enable the following code to parse DG1 data
-            #if false
+#if false
                 if (!IsDocTypeD())
                 {
                     ElyMRTDDotNet.elyMrzParser ElyMrzParserDg1 = new ElyMRTDDotNet.elyMrzParser();
@@ -1356,7 +1490,7 @@ private void TranslateComboBoxFields()
                     if (!ElyMrzParserDg1.IsParseSuccess())
                         PrintListViewError("Invalid MRZ from EF.DG1");
                 }
-            #endif
+#endif
                 dg1 = GatherDg1FieldsFromMrtdObject();
                 PrintListView("DG1 Read.");
             }
@@ -1372,11 +1506,12 @@ private void TranslateComboBoxFields()
             {
                 case (int)ElyMRTDDotNet.ElyMRTDDotNet.APPLET_TYPES.ICAO_PACE:
                 case (int)ElyMRTDDotNet.ElyMRTDDotNet.APPLET_TYPES.ICAO_BAC:
-                    if (iRes >= 0) {
+                    if (iRes >= 0)
+                    {
                         // Enable the following code to validate MRZ (from Scanner) with DG1
-                    #if true
+#if true
                         ValidateMrzWithDG1();
-                    #endif
+#endif
                     }
                     UpdatePictureBoxesDg(this.pictureBoxDG1, iRes);
                     break;
@@ -2054,11 +2189,14 @@ private void TranslateComboBoxFields()
 
             m_iResMan = new SCardManager();
 
-            try {
+            try
+            {
                 if (m_iResMan != null)
                     m_iResMan.EstablishContext(SCOPE.User);
                 szReaders = m_iResMan.ListReaders();
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
             }
             return szReaders;
         }
@@ -2202,7 +2340,8 @@ private void TranslateComboBoxFields()
             int i = 0, nFound = 0;
             foreach (KeyValuePair<string, string> kvp in friendlyPorts)
             {
-                if (IsElyctisMrzScanner(kvp)) {
+                if (IsElyctisMrzScanner(kvp))
+                {
                     nFound++;
                     comboBoxComPort.Items.Add(kvp.Key + " - ID BOX");
                     anComboBoxIndexIdBox[i++] = comboBoxComPort.Items.Count - 1;
@@ -2235,12 +2374,15 @@ private void TranslateComboBoxFields()
                 }
             }
             // If found, select its index, otherwise select nothing (-1)
-            if (bFound) {
+            if (bFound)
+            {
                 if ((!String.IsNullOrEmpty(szReaderTemp)) && comboBoxCcidReaders.Items.Contains(szReaderTemp))
                     comboBoxCcidReaders.Text = szReaderTemp; // Retain the previous name
                 else
                     comboBoxCcidReaders.SelectedIndex = 0; // Triggers SelectedIndexChanged event
-            } else {
+            }
+            else
+            {
                 labelContactlessDriver.Text = "";
                 labelContactlessFwVersion.Text = "";
                 comboBoxCcidReaders.SelectedIndex = -1; // Triggers SelectedIndexChanged event
@@ -2636,6 +2778,7 @@ private void TranslateComboBoxFields()
             };
 
             personalDataList.Add(personalData);
+            MessageBox.Show("Personal data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ClearPersonalDataForm()
@@ -2666,27 +2809,47 @@ private void TranslateComboBoxFields()
 
         private void ButtonExportExcel_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Excel Files|*.xlsx";
-            saveFileDialog.Title = "Save an Excel File";
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Save an Excel File"
+            };
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
-                excelExportService.ExportPersonalDataToExcel(filteredData, selectedFields, saveFileDialog.FileName);
-                MessageBox.Show("Data exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
+                    excelExportService.ExportPersonalDataToExcel(filteredData, selectedFields, saveFileDialog.FileName);
+                    MessageBox.Show("Data exported successfully to Excel.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error exporting to Excel: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ButtonExportJson_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "JSON Files|*.json";
-            saveFileDialog.Title = "Save a JSON File";
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "JSON Files|*.json",
+                Title = "Save a JSON File"
+            };
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
-                jsonExportService.ExportPersonalDataToJson(filteredData, saveFileDialog.FileName);
-                MessageBox.Show("Data exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
+                    jsonExportService.ExportPersonalDataToJson(filteredData, saveFileDialog.FileName);
+                    MessageBox.Show("Data exported successfully to JSON.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error exporting to JSON: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         #endregion

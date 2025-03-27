@@ -1,4 +1,6 @@
-﻿namespace ELY_TRAVEL_DOC
+﻿using System.Drawing;
+
+namespace ELY_TRAVEL_DOC
 {
     partial class MRZForm
     {
@@ -28,8 +30,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+         //   System.Windows.Forms.TabControl tabControl1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRZForm));
-            backgroundWorker = new System.ComponentModel.BackgroundWorker();
+              backgroundWorker = new System.ComponentModel.BackgroundWorker();
             tabControl1 = new System.Windows.Forms.TabControl();
             tabPageID = new System.Windows.Forms.TabPage();
             groupBoxAntenna = new System.Windows.Forms.GroupBox();
@@ -104,62 +107,9 @@
             comboBoxFields = new System.Windows.Forms.CheckedListBox();
             tabPageIDL = new System.Windows.Forms.TabPage();
             groupBoxAccessControlIDL = new System.Windows.Forms.GroupBox();
-            tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            label24 = new System.Windows.Forms.Label();
-            pictureBoxBAP = new System.Windows.Forms.PictureBox();
-            label25 = new System.Windows.Forms.Label();
-            label26 = new System.Windows.Forms.Label();
-            label27 = new System.Windows.Forms.Label();
-            label28 = new System.Windows.Forms.Label();
-            pictureBoxPA_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxTA_BAP = new System.Windows.Forms.PictureBox();
-            label29 = new System.Windows.Forms.Label();
-            pictureBoxCA_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxEAC_BAP = new System.Windows.Forms.PictureBox();
-            label30 = new System.Windows.Forms.Label();
-            pictureBoxAA_BAP = new System.Windows.Forms.PictureBox();
-            label31 = new System.Windows.Forms.Label();
-            tableLayoutPanelPA_BAP = new System.Windows.Forms.TableLayoutPanel();
-            pictureBoxDG16_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG15_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG14_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG13_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG12_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG11_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG10_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG9_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG8_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG7_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG6_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG5_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG4_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG3_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG2_BAP = new System.Windows.Forms.PictureBox();
-            pictureBoxDG1_BAP = new System.Windows.Forms.PictureBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
-            buttonImageRightIdl = new System.Windows.Forms.Button();
-            buttonImageLeftIdl = new System.Windows.Forms.Button();
-            pictureBoxPictureIdl = new System.Windows.Forms.PictureBox();
             groupBoxPersonalDataIDL = new System.Windows.Forms.GroupBox();
-            tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            label40 = new System.Windows.Forms.Label();
-            treeView1 = new System.Windows.Forms.TreeView();
-            label32 = new System.Windows.Forms.Label();
-            textBoxFamilyName = new System.Windows.Forms.TextBox();
-            textBoxGivenNames = new System.Windows.Forms.TextBox();
-            label33 = new System.Windows.Forms.Label();
-            textBoxBirthDateIDL = new System.Windows.Forms.TextBox();
-            textBoxIssuingDate = new System.Windows.Forms.TextBox();
-            label34 = new System.Windows.Forms.Label();
-            textBoxExpiryDateIDL = new System.Windows.Forms.TextBox();
-            textBoxIssuingCountry = new System.Windows.Forms.TextBox();
-            label35 = new System.Windows.Forms.Label();
-            label37 = new System.Windows.Forms.Label();
-            textBoxLicenceNumber = new System.Windows.Forms.TextBox();
-            textBoxIssuingAuthority = new System.Windows.Forms.TextBox();
-            label38 = new System.Windows.Forms.Label();
-            label39 = new System.Windows.Forms.Label();
-            label36 = new System.Windows.Forms.Label();
+            backgroundWorker = new System.ComponentModel.BackgroundWorker();
             groupBoxReadingState = new System.Windows.Forms.GroupBox();
             tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             pictureBoxChipRead = new System.Windows.Forms.PictureBox();
@@ -188,6 +138,61 @@
             labelContactlessDriver = new System.Windows.Forms.Label();
             labelIdBoxProductNumber = new System.Windows.Forms.Label();
             labelScannerNnaVersion = new System.Windows.Forms.Label();
+            tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            label36 = new System.Windows.Forms.Label();
+            label39 = new System.Windows.Forms.Label();
+            label38 = new System.Windows.Forms.Label();
+            textBoxIssuingAuthority = new System.Windows.Forms.TextBox();
+            textBoxLicenceNumber = new System.Windows.Forms.TextBox();
+            label37 = new System.Windows.Forms.Label();
+            label35 = new System.Windows.Forms.Label();
+            textBoxIssuingCountry = new System.Windows.Forms.TextBox();
+            textBoxExpiryDateIDL = new System.Windows.Forms.TextBox();
+            label34 = new System.Windows.Forms.Label();
+            textBoxIssuingDate = new System.Windows.Forms.TextBox();
+            textBoxBirthDateIDL = new System.Windows.Forms.TextBox();
+            label33 = new System.Windows.Forms.Label();
+            textBoxGivenNames = new System.Windows.Forms.TextBox();
+            textBoxFamilyName = new System.Windows.Forms.TextBox();
+            label32 = new System.Windows.Forms.Label();
+            treeView1 = new System.Windows.Forms.TreeView();
+            label40 = new System.Windows.Forms.Label();
+            pictureBoxPictureIdl = new System.Windows.Forms.PictureBox();
+            buttonImageLeftIdl = new System.Windows.Forms.Button();
+            buttonImageRightIdl = new System.Windows.Forms.Button();
+            tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            tableLayoutPanelPA_BAP = new System.Windows.Forms.TableLayoutPanel();
+            pictureBoxDG1_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG2_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG3_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG4_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG5_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG6_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG7_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG8_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG9_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG10_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG11_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG12_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG13_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG14_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG15_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxDG16_BAP = new System.Windows.Forms.PictureBox();
+            label31 = new System.Windows.Forms.Label();
+            pictureBoxAA_BAP = new System.Windows.Forms.PictureBox();
+            label30 = new System.Windows.Forms.Label();
+            pictureBoxEAC_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxCA_BAP = new System.Windows.Forms.PictureBox();
+            label29 = new System.Windows.Forms.Label();
+            pictureBoxTA_BAP = new System.Windows.Forms.PictureBox();
+            pictureBoxPA_BAP = new System.Windows.Forms.PictureBox();
+            label28 = new System.Windows.Forms.Label();
+            label27 = new System.Windows.Forms.Label();
+            label26 = new System.Windows.Forms.Label();
+            label25 = new System.Windows.Forms.Label();
+            pictureBoxBAP = new System.Windows.Forms.PictureBox();
+            label24 = new System.Windows.Forms.Label();
+            tabControl1 = new System.Windows.Forms.TabControl();
             tabControl1.SuspendLayout();
             tabPageID.SuspendLayout();
             groupBoxAntenna.SuspendLayout();
@@ -224,35 +229,6 @@
             groupBoxPersonalData.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tabPageIDL.SuspendLayout();
-            groupBoxAccessControlIDL.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxBAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPA_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxTA_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxCA_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxEAC_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxAA_BAP).BeginInit();
-            tableLayoutPanelPA_BAP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG16_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG15_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG14_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG13_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG12_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG11_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG10_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG9_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG8_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG7_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG6_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG5_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG4_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG3_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG2_BAP).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG1_BAP).BeginInit();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPictureIdl).BeginInit();
-            groupBoxPersonalDataIDL.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
             groupBoxReadingState.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxChipRead).BeginInit();
@@ -261,12 +237,30 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxAntennaSelected).BeginInit();
             groupBoxLogs.SuspendLayout();
             groupBoxConfiguration.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPictureIdl).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG1_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG2_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG3_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG4_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG5_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG6_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG7_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG8_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG9_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG10_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG11_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG12_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG13_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG14_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG15_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG16_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAA_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEAC_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCA_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxTA_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPA_BAP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBAP).BeginInit();
             SuspendLayout();
-            // 
-            // backgroundWorker
-            // 
-            backgroundWorker.DoWork += BackgroundWorker_DoWork;
-            backgroundWorker.RunWorkerCompleted += BackgroundWorker_RunWorkerCompleted;
             // 
             // tabControl1
             // 
@@ -476,7 +470,7 @@
             label22.Size = new System.Drawing.Size(24, 12);
             label22.TabIndex = 0;
             label22.Text = "DG1";
-            label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+         //   label22.TextAlign = System.Windows.Forms.ContentAlignment.TopCenter;
             // 
             // label16
             // 
@@ -1054,6 +1048,17 @@
             // 
             // textBoxName
             // 
+            textBoxName.ReadOnly = false;
+            textBoxSurname.ReadOnly = false;
+            textBoxBirthDate.ReadOnly = false;
+            textBoxNationality.ReadOnly = false;
+            textBoxSex.ReadOnly = false;
+            textBoxExpiryDate.ReadOnly = false;
+            textBoxDocumentNumber.ReadOnly = false;
+            textBoxDocumentType.ReadOnly = false;
+            textBoxIssuer.ReadOnly = false;
+            textBoxOptionalData.ReadOnly = false;
+
             textBoxName.BackColor = System.Drawing.SystemColors.Window;
             textBoxName.Location = new System.Drawing.Point(3, 29);
             textBoxName.Name = "textBoxName";
@@ -1183,6 +1188,7 @@
             tabPageIDL.Controls.Add(groupBoxAccessControlIDL);
             tabPageIDL.Controls.Add(groupBox2);
             tabPageIDL.Controls.Add(groupBoxPersonalDataIDL);
+            tabPageIDL.Enabled = false;
             tabPageIDL.Location = new System.Drawing.Point(4, 26);
             tabPageIDL.Name = "tabPageIDL";
             tabPageIDL.Padding = new System.Windows.Forms.Padding(3);
@@ -1191,743 +1197,35 @@
             tabPageIDL.Text = "  IDL";
             tabPageIDL.UseVisualStyleBackColor = true;
             tabPageIDL.Visible = false;
-            tabPageIDL.Enabled = false;
-
-            // Disable and hide the button
-        // Hide the button
-            // buttonExportJson.Visible = false;
             // 
             // groupBoxAccessControlIDL
             // 
-            groupBoxAccessControlIDL.Controls.Add(tableLayoutPanel4);
             groupBoxAccessControlIDL.Location = new System.Drawing.Point(590, 14);
             groupBoxAccessControlIDL.Name = "groupBoxAccessControlIDL";
             groupBoxAccessControlIDL.Size = new System.Drawing.Size(210, 182);
             groupBoxAccessControlIDL.TabIndex = 2;
             groupBoxAccessControlIDL.TabStop = false;
-            groupBoxAccessControlIDL.Text = "Access Control";
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 4;
-            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            tableLayoutPanel4.Controls.Add(label24, 3, 5);
-            tableLayoutPanel4.Controls.Add(pictureBoxBAP, 0, 0);
-            tableLayoutPanel4.Controls.Add(label25, 1, 4);
-            tableLayoutPanel4.Controls.Add(label26, 1, 5);
-            tableLayoutPanel4.Controls.Add(label27, 1, 0);
-            tableLayoutPanel4.Controls.Add(label28, 2, 3);
-            tableLayoutPanel4.Controls.Add(pictureBoxPA_BAP, 0, 4);
-            tableLayoutPanel4.Controls.Add(pictureBoxTA_BAP, 1, 3);
-            tableLayoutPanel4.Controls.Add(label29, 2, 2);
-            tableLayoutPanel4.Controls.Add(pictureBoxCA_BAP, 1, 2);
-            tableLayoutPanel4.Controls.Add(pictureBoxEAC_BAP, 0, 1);
-            tableLayoutPanel4.Controls.Add(label30, 1, 1);
-            tableLayoutPanel4.Controls.Add(pictureBoxAA_BAP, 0, 6);
-            tableLayoutPanel4.Controls.Add(label31, 1, 6);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanelPA_BAP, 2, 5);
-            tableLayoutPanel4.Location = new System.Drawing.Point(5, 36);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 7;
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            tableLayoutPanel4.Size = new System.Drawing.Size(202, 138);
-            tableLayoutPanel4.TabIndex = 0;
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            label24.ForeColor = System.Drawing.SystemColors.ControlDark;
-            label24.Location = new System.Drawing.Point(172, 104);
-            label24.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(37, 14);
-            label24.TabIndex = 1;
-            label24.Text = "DG16";
-            label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBoxBAP
-            // 
-            pictureBoxBAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            pictureBoxBAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxBAP.Location = new System.Drawing.Point(3, 3);
-            pictureBoxBAP.Name = "pictureBoxBAP";
-            pictureBoxBAP.Size = new System.Drawing.Size(14, 14);
-            pictureBoxBAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBoxBAP.TabIndex = 5;
-            pictureBoxBAP.TabStop = false;
-            // 
-            // label25
-            // 
-            label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label25.AutoSize = true;
-            tableLayoutPanel4.SetColumnSpan(label25, 2);
-            label25.Location = new System.Drawing.Point(23, 81);
-            label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(24, 17);
-            label25.TabIndex = 17;
-            label25.Text = "PA";
-            // 
-            // label26
-            // 
-            label26.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            label26.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            label26.ForeColor = System.Drawing.SystemColors.ControlDark;
-            label26.Location = new System.Drawing.Point(20, 104);
-            label26.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            label26.Name = "label26";
-            label26.Size = new System.Drawing.Size(24, 12);
-            label26.TabIndex = 0;
-            label26.Text = "DG1";
-            label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label27
-            // 
-            label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label27.AutoSize = true;
-            tableLayoutPanel4.SetColumnSpan(label27, 2);
-            label27.Location = new System.Drawing.Point(23, 1);
-            label27.Name = "label27";
-            label27.Size = new System.Drawing.Size(78, 17);
-            label27.TabIndex = 10;
-            label27.Text = "BAP / PACE";
-            // 
-            // label28
-            // 
-            label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label28.AutoSize = true;
-            label28.Location = new System.Drawing.Point(47, 61);
-            label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(24, 17);
-            label28.TabIndex = 15;
-            label28.Text = "TA";
-            // 
-            // pictureBoxPA_BAP
-            // 
-            pictureBoxPA_BAP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            pictureBoxPA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxPA_BAP.Enabled = false;
-            pictureBoxPA_BAP.Location = new System.Drawing.Point(3, 83);
-            pictureBoxPA_BAP.Name = "pictureBoxPA_BAP";
-            pictureBoxPA_BAP.Size = new System.Drawing.Size(14, 14);
-            pictureBoxPA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBoxPA_BAP.TabIndex = 16;
-            pictureBoxPA_BAP.TabStop = false;
-            // 
-            // pictureBoxTA_BAP
-            // 
-            pictureBoxTA_BAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            pictureBoxTA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxTA_BAP.Location = new System.Drawing.Point(25, 63);
-            pictureBoxTA_BAP.Name = "pictureBoxTA_BAP";
-            pictureBoxTA_BAP.Size = new System.Drawing.Size(14, 14);
-            pictureBoxTA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBoxTA_BAP.TabIndex = 8;
-            pictureBoxTA_BAP.TabStop = false;
-            // 
-            // label29
-            // 
-            label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label29.AutoSize = true;
-            label29.Location = new System.Drawing.Point(47, 41);
-            label29.Name = "label29";
-            label29.Size = new System.Drawing.Size(25, 17);
-            label29.TabIndex = 14;
-            label29.Text = "CA";
-            // 
-            // pictureBoxCA_BAP
-            // 
-            pictureBoxCA_BAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            pictureBoxCA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxCA_BAP.Location = new System.Drawing.Point(25, 43);
-            pictureBoxCA_BAP.Name = "pictureBoxCA_BAP";
-            pictureBoxCA_BAP.Size = new System.Drawing.Size(14, 14);
-            pictureBoxCA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBoxCA_BAP.TabIndex = 7;
-            pictureBoxCA_BAP.TabStop = false;
-            // 
-            // pictureBoxEAC_BAP
-            // 
-            pictureBoxEAC_BAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            pictureBoxEAC_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxEAC_BAP.Location = new System.Drawing.Point(3, 23);
-            pictureBoxEAC_BAP.Name = "pictureBoxEAC_BAP";
-            pictureBoxEAC_BAP.Size = new System.Drawing.Size(14, 14);
-            pictureBoxEAC_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBoxEAC_BAP.TabIndex = 6;
-            pictureBoxEAC_BAP.TabStop = false;
-            // 
-            // label30
-            // 
-            label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label30.AutoSize = true;
-            tableLayoutPanel4.SetColumnSpan(label30, 2);
-            label30.Location = new System.Drawing.Point(23, 21);
-            label30.Name = "label30";
-            label30.Size = new System.Drawing.Size(33, 17);
-            label30.TabIndex = 11;
-            label30.Text = "EAC";
-            // 
-            // pictureBoxAA_BAP
-            // 
-            pictureBoxAA_BAP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            pictureBoxAA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxAA_BAP.Enabled = false;
-            pictureBoxAA_BAP.Location = new System.Drawing.Point(3, 121);
-            pictureBoxAA_BAP.Name = "pictureBoxAA_BAP";
-            pictureBoxAA_BAP.Size = new System.Drawing.Size(14, 14);
-            pictureBoxAA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBoxAA_BAP.TabIndex = 9;
-            pictureBoxAA_BAP.TabStop = false;
-            // 
-            // label31
-            // 
-            label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label31.AutoSize = true;
-            tableLayoutPanel4.SetColumnSpan(label31, 2);
-            label31.Location = new System.Drawing.Point(23, 119);
-            label31.Name = "label31";
-            label31.Size = new System.Drawing.Size(24, 17);
-            label31.TabIndex = 13;
-            label31.Text = "AA";
-            // 
-            // tableLayoutPanelPA_BAP
-            // 
-            tableLayoutPanelPA_BAP.ColumnCount = 16;
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG16_BAP, 15, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG15_BAP, 14, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG14_BAP, 13, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG13_BAP, 12, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG12_BAP, 11, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG11_BAP, 10, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG10_BAP, 9, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG9_BAP, 8, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG8_BAP, 7, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG7_BAP, 6, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG6_BAP, 5, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG5_BAP, 4, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG4_BAP, 3, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG3_BAP, 2, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG2_BAP, 1, 0);
-            tableLayoutPanelPA_BAP.Controls.Add(pictureBoxDG1_BAP, 0, 0);
-            tableLayoutPanelPA_BAP.Location = new System.Drawing.Point(44, 104);
-            tableLayoutPanelPA_BAP.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            tableLayoutPanelPA_BAP.Name = "tableLayoutPanelPA_BAP";
-            tableLayoutPanelPA_BAP.RowCount = 1;
-            tableLayoutPanelPA_BAP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanelPA_BAP.Size = new System.Drawing.Size(127, 12);
-            tableLayoutPanelPA_BAP.TabIndex = 35;
-            // 
-            // pictureBoxDG16_BAP
-            // 
-            pictureBoxDG16_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG16_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG16_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG16_BAP.Location = new System.Drawing.Point(120, 2);
-            pictureBoxDG16_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG16_BAP.Name = "pictureBoxDG16_BAP";
-            pictureBoxDG16_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG16_BAP.TabIndex = 15;
-            pictureBoxDG16_BAP.TabStop = false;
-            // 
-            // pictureBoxDG15_BAP
-            // 
-            pictureBoxDG15_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG15_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG15_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG15_BAP.Location = new System.Drawing.Point(112, 2);
-            pictureBoxDG15_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG15_BAP.Name = "pictureBoxDG15_BAP";
-            pictureBoxDG15_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG15_BAP.TabIndex = 14;
-            pictureBoxDG15_BAP.TabStop = false;
-            // 
-            // pictureBoxDG14_BAP
-            // 
-            pictureBoxDG14_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG14_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG14_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG14_BAP.Location = new System.Drawing.Point(104, 2);
-            pictureBoxDG14_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG14_BAP.Name = "pictureBoxDG14_BAP";
-            pictureBoxDG14_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG14_BAP.TabIndex = 13;
-            pictureBoxDG14_BAP.TabStop = false;
-            // 
-            // pictureBoxDG13_BAP
-            // 
-            pictureBoxDG13_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG13_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG13_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG13_BAP.Location = new System.Drawing.Point(96, 2);
-            pictureBoxDG13_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG13_BAP.Name = "pictureBoxDG13_BAP";
-            pictureBoxDG13_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG13_BAP.TabIndex = 12;
-            pictureBoxDG13_BAP.TabStop = false;
-            // 
-            // pictureBoxDG12_BAP
-            // 
-            pictureBoxDG12_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG12_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG12_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG12_BAP.Location = new System.Drawing.Point(88, 2);
-            pictureBoxDG12_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG12_BAP.Name = "pictureBoxDG12_BAP";
-            pictureBoxDG12_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG12_BAP.TabIndex = 11;
-            pictureBoxDG12_BAP.TabStop = false;
-            // 
-            // pictureBoxDG11_BAP
-            // 
-            pictureBoxDG11_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG11_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG11_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG11_BAP.Location = new System.Drawing.Point(80, 2);
-            pictureBoxDG11_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG11_BAP.Name = "pictureBoxDG11_BAP";
-            pictureBoxDG11_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG11_BAP.TabIndex = 10;
-            pictureBoxDG11_BAP.TabStop = false;
-            // 
-            // pictureBoxDG10_BAP
-            // 
-            pictureBoxDG10_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG10_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG10_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG10_BAP.Location = new System.Drawing.Point(72, 2);
-            pictureBoxDG10_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG10_BAP.Name = "pictureBoxDG10_BAP";
-            pictureBoxDG10_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG10_BAP.TabIndex = 9;
-            pictureBoxDG10_BAP.TabStop = false;
-            // 
-            // pictureBoxDG9_BAP
-            // 
-            pictureBoxDG9_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG9_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG9_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG9_BAP.Location = new System.Drawing.Point(64, 2);
-            pictureBoxDG9_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG9_BAP.Name = "pictureBoxDG9_BAP";
-            pictureBoxDG9_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG9_BAP.TabIndex = 8;
-            pictureBoxDG9_BAP.TabStop = false;
-            // 
-            // pictureBoxDG8_BAP
-            // 
-            pictureBoxDG8_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG8_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG8_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG8_BAP.Location = new System.Drawing.Point(56, 2);
-            pictureBoxDG8_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG8_BAP.Name = "pictureBoxDG8_BAP";
-            pictureBoxDG8_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG8_BAP.TabIndex = 7;
-            pictureBoxDG8_BAP.TabStop = false;
-            // 
-            // pictureBoxDG7_BAP
-            // 
-            pictureBoxDG7_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG7_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG7_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG7_BAP.Location = new System.Drawing.Point(48, 2);
-            pictureBoxDG7_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG7_BAP.Name = "pictureBoxDG7_BAP";
-            pictureBoxDG7_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG7_BAP.TabIndex = 6;
-            pictureBoxDG7_BAP.TabStop = false;
-            // 
-            // pictureBoxDG6_BAP
-            // 
-            pictureBoxDG6_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG6_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG6_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG6_BAP.Location = new System.Drawing.Point(40, 2);
-            pictureBoxDG6_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG6_BAP.Name = "pictureBoxDG6_BAP";
-            pictureBoxDG6_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG6_BAP.TabIndex = 5;
-            pictureBoxDG6_BAP.TabStop = false;
-            // 
-            // pictureBoxDG5_BAP
-            // 
-            pictureBoxDG5_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG5_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG5_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG5_BAP.Location = new System.Drawing.Point(32, 2);
-            pictureBoxDG5_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG5_BAP.Name = "pictureBoxDG5_BAP";
-            pictureBoxDG5_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG5_BAP.TabIndex = 4;
-            pictureBoxDG5_BAP.TabStop = false;
-            // 
-            // pictureBoxDG4_BAP
-            // 
-            pictureBoxDG4_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG4_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG4_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG4_BAP.Location = new System.Drawing.Point(24, 2);
-            pictureBoxDG4_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG4_BAP.Name = "pictureBoxDG4_BAP";
-            pictureBoxDG4_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG4_BAP.TabIndex = 3;
-            pictureBoxDG4_BAP.TabStop = false;
-            // 
-            // pictureBoxDG3_BAP
-            // 
-            pictureBoxDG3_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG3_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG3_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG3_BAP.Location = new System.Drawing.Point(16, 2);
-            pictureBoxDG3_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG3_BAP.Name = "pictureBoxDG3_BAP";
-            pictureBoxDG3_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG3_BAP.TabIndex = 2;
-            pictureBoxDG3_BAP.TabStop = false;
-            // 
-            // pictureBoxDG2_BAP
-            // 
-            pictureBoxDG2_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG2_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG2_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG2_BAP.Location = new System.Drawing.Point(8, 2);
-            pictureBoxDG2_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG2_BAP.Name = "pictureBoxDG2_BAP";
-            pictureBoxDG2_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG2_BAP.TabIndex = 1;
-            pictureBoxDG2_BAP.TabStop = false;
-            // 
-            // pictureBoxDG1_BAP
-            // 
-            pictureBoxDG1_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pictureBoxDG1_BAP.BackColor = System.Drawing.Color.White;
-            pictureBoxDG1_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pictureBoxDG1_BAP.Location = new System.Drawing.Point(0, 2);
-            pictureBoxDG1_BAP.Margin = new System.Windows.Forms.Padding(0);
-            pictureBoxDG1_BAP.Name = "pictureBoxDG1_BAP";
-            pictureBoxDG1_BAP.Size = new System.Drawing.Size(6, 8);
-            pictureBoxDG1_BAP.TabIndex = 0;
-            pictureBoxDG1_BAP.TabStop = false;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(buttonImageRightIdl);
-            groupBox2.Controls.Add(buttonImageLeftIdl);
-            groupBox2.Controls.Add(pictureBoxPictureIdl);
             groupBox2.Location = new System.Drawing.Point(12, 14);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new System.Drawing.Size(208, 288);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Picture";
-            // 
-            // buttonImageRightIdl
-            // 
-            buttonImageRightIdl.Enabled = false;
-            buttonImageRightIdl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            buttonImageRightIdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            buttonImageRightIdl.Location = new System.Drawing.Point(105, 257);
-            buttonImageRightIdl.Name = "buttonImageRightIdl";
-            buttonImageRightIdl.Size = new System.Drawing.Size(36, 21);
-            buttonImageRightIdl.TabIndex = 2;
-            buttonImageRightIdl.Text = ">";
-            buttonImageRightIdl.UseVisualStyleBackColor = true;
-            buttonImageRightIdl.Visible = false;
-            buttonImageRightIdl.Click += buttonImageRightIdl_Click;
-            buttonImageRightIdl.MouseEnter += buttonImageIdl_MouseEnter;
-            buttonImageRightIdl.MouseLeave += buttonImageIdl_MouseLeave;
-            // 
-            // buttonImageLeftIdl
-            // 
-            buttonImageLeftIdl.Enabled = false;
-            buttonImageLeftIdl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            buttonImageLeftIdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            buttonImageLeftIdl.Location = new System.Drawing.Point(63, 257);
-            buttonImageLeftIdl.Name = "buttonImageLeftIdl";
-            buttonImageLeftIdl.Size = new System.Drawing.Size(36, 21);
-            buttonImageLeftIdl.TabIndex = 1;
-            buttonImageLeftIdl.Text = "<";
-            buttonImageLeftIdl.UseVisualStyleBackColor = true;
-            buttonImageLeftIdl.Visible = false;
-            buttonImageLeftIdl.Click += buttonImageLeftIdl_Click;
-            buttonImageLeftIdl.MouseEnter += buttonImageIdl_MouseEnter;
-            buttonImageLeftIdl.MouseLeave += buttonImageIdl_MouseLeave;
-            // 
-            // pictureBoxPictureIdl
-            // 
-            pictureBoxPictureIdl.Location = new System.Drawing.Point(6, 24);
-            pictureBoxPictureIdl.Name = "pictureBoxPictureIdl";
-            pictureBoxPictureIdl.Size = new System.Drawing.Size(196, 257);
-            pictureBoxPictureIdl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pictureBoxPictureIdl.TabIndex = 0;
-            pictureBoxPictureIdl.TabStop = false;
-            pictureBoxPictureIdl.MouseEnter += pictureBoxPictureIdl_MouseEnter;
-            pictureBoxPictureIdl.MouseLeave += pictureBoxPictureIdl_MouseLeave;
             // 
             // groupBoxPersonalDataIDL
             // 
-            groupBoxPersonalDataIDL.Controls.Add(tableLayoutPanel6);
             groupBoxPersonalDataIDL.Location = new System.Drawing.Point(230, 14);
             groupBoxPersonalDataIDL.Name = "groupBoxPersonalDataIDL";
             groupBoxPersonalDataIDL.Size = new System.Drawing.Size(350, 288);
             groupBoxPersonalDataIDL.TabIndex = 2;
             groupBoxPersonalDataIDL.TabStop = false;
-            groupBoxPersonalDataIDL.Text = "Personal Data";
             // 
-            // tableLayoutPanel6
+            // backgroundWorker
             // 
-            tableLayoutPanel6.ColumnCount = 2;
-            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel6.Controls.Add(label40, 1, 6);
-            tableLayoutPanel6.Controls.Add(treeView1, 1, 7);
-            tableLayoutPanel6.Controls.Add(label32, 0, 6);
-            tableLayoutPanel6.Controls.Add(textBoxFamilyName, 0, 1);
-            tableLayoutPanel6.Controls.Add(textBoxGivenNames, 1, 1);
-            tableLayoutPanel6.Controls.Add(label33, 1, 4);
-            tableLayoutPanel6.Controls.Add(textBoxBirthDateIDL, 0, 3);
-            tableLayoutPanel6.Controls.Add(textBoxIssuingDate, 1, 3);
-            tableLayoutPanel6.Controls.Add(label34, 1, 2);
-            tableLayoutPanel6.Controls.Add(textBoxExpiryDateIDL, 0, 5);
-            tableLayoutPanel6.Controls.Add(textBoxIssuingCountry, 1, 5);
-            tableLayoutPanel6.Controls.Add(label35, 1, 0);
-            tableLayoutPanel6.Controls.Add(label37, 0, 4);
-            tableLayoutPanel6.Controls.Add(textBoxLicenceNumber, 0, 7);
-            tableLayoutPanel6.Controls.Add(textBoxIssuingAuthority, 0, 9);
-            tableLayoutPanel6.Controls.Add(label38, 0, 2);
-            tableLayoutPanel6.Controls.Add(label39, 0, 0);
-            tableLayoutPanel6.Controls.Add(label36, 0, 8);
-            tableLayoutPanel6.Location = new System.Drawing.Point(5, 19);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 10;
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            tableLayoutPanel6.Size = new System.Drawing.Size(340, 263);
-            tableLayoutPanel6.TabIndex = 0;
-            // 
-            // label40
-            // 
-            label40.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label40.AutoSize = true;
-            label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label40.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label40.Location = new System.Drawing.Point(173, 165);
-            label40.Name = "label40";
-            label40.Size = new System.Drawing.Size(72, 17);
-            label40.TabIndex = 48;
-            label40.Text = "Categories";
-            // 
-            // treeView1
-            // 
-            treeView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            treeView1.Location = new System.Drawing.Point(173, 185);
-            treeView1.Name = "treeView1";
-            tableLayoutPanel6.SetRowSpan(treeView1, 3);
-            treeView1.Size = new System.Drawing.Size(164, 73);
-            treeView1.TabIndex = 40;
-            // 
-            // label32
-            // 
-            label32.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label32.AutoSize = true;
-            label32.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label32.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label32.Location = new System.Drawing.Point(3, 165);
-            label32.Name = "label32";
-            label32.Size = new System.Drawing.Size(106, 17);
-            label32.TabIndex = 47;
-            label32.Text = "Licence Number";
-            // 
-            // textBoxFamilyName
-            // 
-            textBoxFamilyName.BackColor = System.Drawing.SystemColors.Window;
-            textBoxFamilyName.Location = new System.Drawing.Point(3, 29);
-            textBoxFamilyName.Name = "textBoxFamilyName";
-            textBoxFamilyName.ReadOnly = true;
-            textBoxFamilyName.Size = new System.Drawing.Size(164, 24);
-            textBoxFamilyName.TabIndex = 10;
-            // 
-            // textBoxGivenNames
-            // 
-            textBoxGivenNames.BackColor = System.Drawing.SystemColors.Window;
-            textBoxGivenNames.Location = new System.Drawing.Point(173, 29);
-            textBoxGivenNames.Name = "textBoxGivenNames";
-            textBoxGivenNames.ReadOnly = true;
-            textBoxGivenNames.Size = new System.Drawing.Size(164, 24);
-            textBoxGivenNames.TabIndex = 11;
-            // 
-            // label33
-            // 
-            label33.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label33.AutoSize = true;
-            label33.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label33.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label33.Location = new System.Drawing.Point(173, 113);
-            label33.Name = "label33";
-            label33.Size = new System.Drawing.Size(105, 17);
-            label33.TabIndex = 46;
-            label33.Text = "Issuing Country";
-            // 
-            // textBoxBirthDateIDL
-            // 
-            textBoxBirthDateIDL.BackColor = System.Drawing.SystemColors.Window;
-            textBoxBirthDateIDL.Location = new System.Drawing.Point(3, 81);
-            textBoxBirthDateIDL.Name = "textBoxBirthDateIDL";
-            textBoxBirthDateIDL.ReadOnly = true;
-            textBoxBirthDateIDL.Size = new System.Drawing.Size(164, 24);
-            textBoxBirthDateIDL.TabIndex = 12;
-            // 
-            // textBoxIssuingDate
-            // 
-            textBoxIssuingDate.BackColor = System.Drawing.SystemColors.Window;
-            textBoxIssuingDate.Location = new System.Drawing.Point(173, 81);
-            textBoxIssuingDate.Name = "textBoxIssuingDate";
-            textBoxIssuingDate.ReadOnly = true;
-            textBoxIssuingDate.Size = new System.Drawing.Size(164, 24);
-            textBoxIssuingDate.TabIndex = 13;
-            // 
-            // label34
-            // 
-            label34.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label34.AutoSize = true;
-            label34.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label34.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label34.Location = new System.Drawing.Point(173, 61);
-            label34.Name = "label34";
-            label34.Size = new System.Drawing.Size(83, 17);
-            label34.TabIndex = 45;
-            label34.Text = "Issuing Date";
-            // 
-            // textBoxExpiryDateIDL
-            // 
-            textBoxExpiryDateIDL.BackColor = System.Drawing.SystemColors.Window;
-            textBoxExpiryDateIDL.Location = new System.Drawing.Point(3, 133);
-            textBoxExpiryDateIDL.Name = "textBoxExpiryDateIDL";
-            textBoxExpiryDateIDL.ReadOnly = true;
-            textBoxExpiryDateIDL.Size = new System.Drawing.Size(164, 24);
-            textBoxExpiryDateIDL.TabIndex = 14;
-            // 
-            // textBoxIssuingCountry
-            // 
-            textBoxIssuingCountry.BackColor = System.Drawing.SystemColors.Window;
-            textBoxIssuingCountry.Location = new System.Drawing.Point(173, 133);
-            textBoxIssuingCountry.Name = "textBoxIssuingCountry";
-            textBoxIssuingCountry.ReadOnly = true;
-            textBoxIssuingCountry.Size = new System.Drawing.Size(164, 24);
-            textBoxIssuingCountry.TabIndex = 15;
-            // 
-            // label35
-            // 
-            label35.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label35.AutoSize = true;
-            label35.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label35.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label35.Location = new System.Drawing.Point(173, 9);
-            label35.Name = "label35";
-            label35.Size = new System.Drawing.Size(87, 17);
-            label35.TabIndex = 44;
-            label35.Text = "Given Names";
-            // 
-            // label37
-            // 
-            label37.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label37.AutoSize = true;
-            label37.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label37.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label37.Location = new System.Drawing.Point(3, 113);
-            label37.Name = "label37";
-            label37.Size = new System.Drawing.Size(80, 17);
-            label37.TabIndex = 42;
-            label37.Text = "Expiry Date";
-            // 
-            // textBoxLicenceNumber
-            // 
-            textBoxLicenceNumber.BackColor = System.Drawing.SystemColors.Window;
-            textBoxLicenceNumber.Location = new System.Drawing.Point(3, 185);
-            textBoxLicenceNumber.Name = "textBoxLicenceNumber";
-            textBoxLicenceNumber.ReadOnly = true;
-            textBoxLicenceNumber.Size = new System.Drawing.Size(164, 24);
-            textBoxLicenceNumber.TabIndex = 16;
-            // 
-            // textBoxIssuingAuthority
-            // 
-            textBoxIssuingAuthority.BackColor = System.Drawing.SystemColors.Window;
-            textBoxIssuingAuthority.Location = new System.Drawing.Point(3, 237);
-            textBoxIssuingAuthority.Name = "textBoxIssuingAuthority";
-            textBoxIssuingAuthority.ReadOnly = true;
-            textBoxIssuingAuthority.Size = new System.Drawing.Size(164, 24);
-            textBoxIssuingAuthority.TabIndex = 18;
-            // 
-            // label38
-            // 
-            label38.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label38.AutoSize = true;
-            label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label38.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label38.Location = new System.Drawing.Point(3, 61);
-            label38.Name = "label38";
-            label38.Size = new System.Drawing.Size(69, 17);
-            label38.TabIndex = 41;
-            label38.Text = "Birth Date";
-            // 
-            // label39
-            // 
-            label39.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label39.AutoSize = true;
-            label39.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label39.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label39.Location = new System.Drawing.Point(3, 9);
-            label39.Name = "label39";
-            label39.Size = new System.Drawing.Size(85, 17);
-            label39.TabIndex = 40;
-            label39.Text = "Family Name";
-            // 
-            // label36
-            // 
-            label36.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            label36.AutoSize = true;
-            label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            label36.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label36.Location = new System.Drawing.Point(3, 217);
-            label36.Name = "label36";
-            label36.Size = new System.Drawing.Size(111, 17);
-            label36.TabIndex = 43;
-            label36.Text = "Issuing Authority";
+            backgroundWorker.DoWork += BackgroundWorker_DoWork;
+            backgroundWorker.RunWorkerCompleted += BackgroundWorker_RunWorkerCompleted;
             // 
             // groupBoxReadingState
             // 
@@ -2263,6 +1561,636 @@
             labelScannerNnaVersion.TabIndex = 11;
             labelScannerNnaVersion.Text = "NNA";
             // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.ColumnCount = 2;
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel6.Location = new System.Drawing.Point(5, 19);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 10;
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            tableLayoutPanel6.Size = new System.Drawing.Size(340, 263);
+            tableLayoutPanel6.TabIndex = 0;
+            // 
+            // label36
+            // 
+            label36.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label36.AutoSize = true;
+            label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label36.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label36.Location = new System.Drawing.Point(3, 217);
+            label36.Name = "label36";
+            label36.Size = new System.Drawing.Size(111, 17);
+            label36.TabIndex = 43;
+            // 
+            // label39
+            // 
+            label39.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label39.AutoSize = true;
+            label39.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label39.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label39.Location = new System.Drawing.Point(3, 9);
+            label39.Name = "label39";
+            label39.Size = new System.Drawing.Size(85, 17);
+            label39.TabIndex = 40;
+            // 
+            // label38
+            // 
+            label38.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label38.AutoSize = true;
+            label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label38.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label38.Location = new System.Drawing.Point(3, 61);
+            label38.Name = "label38";
+            label38.Size = new System.Drawing.Size(69, 17);
+            label38.TabIndex = 41;
+            // 
+            // textBoxIssuingAuthority
+            // 
+            textBoxIssuingAuthority.BackColor = System.Drawing.SystemColors.Window;
+            textBoxIssuingAuthority.Location = new System.Drawing.Point(3, 237);
+            textBoxIssuingAuthority.Name = "textBoxIssuingAuthority";
+            textBoxIssuingAuthority.ReadOnly = true;
+            textBoxIssuingAuthority.Size = new System.Drawing.Size(164, 27);
+            textBoxIssuingAuthority.TabIndex = 18;
+            // 
+            // textBoxLicenceNumber
+            // 
+            textBoxLicenceNumber.BackColor = System.Drawing.SystemColors.Window;
+            textBoxLicenceNumber.Location = new System.Drawing.Point(3, 185);
+            textBoxLicenceNumber.Name = "textBoxLicenceNumber";
+            textBoxLicenceNumber.ReadOnly = true;
+            textBoxLicenceNumber.Size = new System.Drawing.Size(164, 27);
+            textBoxLicenceNumber.TabIndex = 16;
+            // 
+            // label37
+            // 
+            label37.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label37.AutoSize = true;
+            label37.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label37.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label37.Location = new System.Drawing.Point(3, 113);
+            label37.Name = "label37";
+            label37.Size = new System.Drawing.Size(80, 17);
+            label37.TabIndex = 42;
+            // 
+            // label35
+            // 
+            label35.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label35.AutoSize = true;
+            label35.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label35.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label35.Location = new System.Drawing.Point(173, 9);
+            label35.Name = "label35";
+            label35.Size = new System.Drawing.Size(87, 17);
+            label35.TabIndex = 44;
+            // 
+            // textBoxIssuingCountry
+            // 
+            textBoxIssuingCountry.BackColor = System.Drawing.SystemColors.Window;
+            textBoxIssuingCountry.Location = new System.Drawing.Point(173, 133);
+            textBoxIssuingCountry.Name = "textBoxIssuingCountry";
+            textBoxIssuingCountry.ReadOnly = true;
+            textBoxIssuingCountry.Size = new System.Drawing.Size(164, 27);
+            textBoxIssuingCountry.TabIndex = 15;
+            // 
+            // textBoxExpiryDateIDL
+            // 
+            textBoxExpiryDateIDL.BackColor = System.Drawing.SystemColors.Window;
+            textBoxExpiryDateIDL.Location = new System.Drawing.Point(3, 133);
+            textBoxExpiryDateIDL.Name = "textBoxExpiryDateIDL";
+            textBoxExpiryDateIDL.ReadOnly = true;
+            textBoxExpiryDateIDL.Size = new System.Drawing.Size(164, 27);
+            textBoxExpiryDateIDL.TabIndex = 14;
+            // 
+            // label34
+            // 
+            label34.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label34.AutoSize = true;
+            label34.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label34.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label34.Location = new System.Drawing.Point(173, 61);
+            label34.Name = "label34";
+            label34.Size = new System.Drawing.Size(83, 17);
+            label34.TabIndex = 45;
+            // 
+            // textBoxIssuingDate
+            // 
+            textBoxIssuingDate.BackColor = System.Drawing.SystemColors.Window;
+            textBoxIssuingDate.Location = new System.Drawing.Point(173, 81);
+            textBoxIssuingDate.Name = "textBoxIssuingDate";
+            textBoxIssuingDate.ReadOnly = true;
+            textBoxIssuingDate.Size = new System.Drawing.Size(164, 27);
+            textBoxIssuingDate.TabIndex = 13;
+            // 
+            // textBoxBirthDateIDL
+            // 
+            textBoxBirthDateIDL.BackColor = System.Drawing.SystemColors.Window;
+            textBoxBirthDateIDL.Location = new System.Drawing.Point(3, 81);
+            textBoxBirthDateIDL.Name = "textBoxBirthDateIDL";
+            textBoxBirthDateIDL.ReadOnly = true;
+            textBoxBirthDateIDL.Size = new System.Drawing.Size(164, 27);
+            textBoxBirthDateIDL.TabIndex = 12;
+            // 
+            // label33
+            // 
+            label33.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label33.AutoSize = true;
+            label33.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label33.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label33.Location = new System.Drawing.Point(173, 113);
+            label33.Name = "label33";
+            label33.Size = new System.Drawing.Size(105, 17);
+            label33.TabIndex = 46;
+            // 
+            // textBoxGivenNames
+            // 
+            textBoxGivenNames.BackColor = System.Drawing.SystemColors.Window;
+            textBoxGivenNames.Location = new System.Drawing.Point(173, 29);
+            textBoxGivenNames.Name = "textBoxGivenNames";
+            textBoxGivenNames.ReadOnly = true;
+            textBoxGivenNames.Size = new System.Drawing.Size(164, 27);
+            textBoxGivenNames.TabIndex = 11;
+            // 
+            // textBoxFamilyName
+            // 
+            textBoxFamilyName.BackColor = System.Drawing.SystemColors.Window;
+            textBoxFamilyName.Location = new System.Drawing.Point(3, 29);
+            textBoxFamilyName.Name = "textBoxFamilyName";
+            textBoxFamilyName.ReadOnly = true;
+            textBoxFamilyName.Size = new System.Drawing.Size(164, 27);
+            textBoxFamilyName.TabIndex = 10;
+            // 
+            // label32
+            // 
+            label32.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label32.AutoSize = true;
+            label32.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label32.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label32.Location = new System.Drawing.Point(3, 165);
+            label32.Name = "label32";
+            label32.Size = new System.Drawing.Size(106, 17);
+            label32.TabIndex = 47;
+            // 
+            // treeView1
+            // 
+            treeView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            treeView1.LineColor = System.Drawing.Color.Empty;
+            treeView1.Location = new System.Drawing.Point(173, 185);
+            treeView1.Name = "treeView1";
+            treeView1.Size = new System.Drawing.Size(164, 73);
+            treeView1.TabIndex = 40;
+            // 
+            // label40
+            // 
+            label40.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label40.AutoSize = true;
+            label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label40.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            label40.Location = new System.Drawing.Point(173, 165);
+            label40.Name = "label40";
+            label40.Size = new System.Drawing.Size(72, 17);
+            label40.TabIndex = 48;
+            // 
+            // pictureBoxPictureIdl
+            // 
+            pictureBoxPictureIdl.Location = new System.Drawing.Point(6, 24);
+            pictureBoxPictureIdl.Name = "pictureBoxPictureIdl";
+            pictureBoxPictureIdl.Size = new System.Drawing.Size(196, 257);
+            pictureBoxPictureIdl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBoxPictureIdl.TabIndex = 0;
+            pictureBoxPictureIdl.TabStop = false;
+            pictureBoxPictureIdl.MouseEnter += pictureBoxPictureIdl_MouseEnter;
+            pictureBoxPictureIdl.MouseLeave += pictureBoxPictureIdl_MouseLeave;
+            // 
+            // buttonImageLeftIdl
+            // 
+            buttonImageLeftIdl.Enabled = false;
+            buttonImageLeftIdl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonImageLeftIdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            buttonImageLeftIdl.Location = new System.Drawing.Point(63, 257);
+            buttonImageLeftIdl.Name = "buttonImageLeftIdl";
+            buttonImageLeftIdl.Size = new System.Drawing.Size(36, 21);
+            buttonImageLeftIdl.TabIndex = 1;
+            buttonImageLeftIdl.Text = "<";
+            buttonImageLeftIdl.UseVisualStyleBackColor = true;
+            buttonImageLeftIdl.Visible = false;
+            buttonImageLeftIdl.Click += buttonImageLeftIdl_Click;
+            buttonImageLeftIdl.MouseEnter += buttonImageIdl_MouseEnter;
+            buttonImageLeftIdl.MouseLeave += buttonImageIdl_MouseLeave;
+            // 
+            // buttonImageRightIdl
+            // 
+            buttonImageRightIdl.Enabled = false;
+            buttonImageRightIdl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonImageRightIdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            buttonImageRightIdl.Location = new System.Drawing.Point(105, 257);
+            buttonImageRightIdl.Name = "buttonImageRightIdl";
+            buttonImageRightIdl.Size = new System.Drawing.Size(36, 21);
+            buttonImageRightIdl.TabIndex = 2;
+            buttonImageRightIdl.Text = ">";
+            buttonImageRightIdl.UseVisualStyleBackColor = true;
+            buttonImageRightIdl.Visible = false;
+            buttonImageRightIdl.Click += buttonImageRightIdl_Click;
+            buttonImageRightIdl.MouseEnter += buttonImageIdl_MouseEnter;
+            buttonImageRightIdl.MouseLeave += buttonImageIdl_MouseLeave;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 4;
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel4.Location = new System.Drawing.Point(5, 36);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 7;
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            tableLayoutPanel4.Size = new System.Drawing.Size(202, 138);
+            tableLayoutPanel4.TabIndex = 0;
+            // 
+            // tableLayoutPanelPA_BAP
+            // 
+            tableLayoutPanelPA_BAP.ColumnCount = 16;
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            tableLayoutPanelPA_BAP.Location = new System.Drawing.Point(44, 104);
+            tableLayoutPanelPA_BAP.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            tableLayoutPanelPA_BAP.Name = "tableLayoutPanelPA_BAP";
+            tableLayoutPanelPA_BAP.RowCount = 1;
+            tableLayoutPanelPA_BAP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanelPA_BAP.Size = new System.Drawing.Size(127, 12);
+            tableLayoutPanelPA_BAP.TabIndex = 35;
+            // 
+            // pictureBoxDG1_BAP
+            // 
+            pictureBoxDG1_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG1_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG1_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG1_BAP.Location = new System.Drawing.Point(0, 2);
+            pictureBoxDG1_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG1_BAP.Name = "pictureBoxDG1_BAP";
+            pictureBoxDG1_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG1_BAP.TabIndex = 0;
+            pictureBoxDG1_BAP.TabStop = false;
+            // 
+            // pictureBoxDG2_BAP
+            // 
+            pictureBoxDG2_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG2_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG2_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG2_BAP.Location = new System.Drawing.Point(8, 2);
+            pictureBoxDG2_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG2_BAP.Name = "pictureBoxDG2_BAP";
+            pictureBoxDG2_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG2_BAP.TabIndex = 1;
+            pictureBoxDG2_BAP.TabStop = false;
+            // 
+            // pictureBoxDG3_BAP
+            // 
+            pictureBoxDG3_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG3_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG3_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG3_BAP.Location = new System.Drawing.Point(16, 2);
+            pictureBoxDG3_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG3_BAP.Name = "pictureBoxDG3_BAP";
+            pictureBoxDG3_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG3_BAP.TabIndex = 2;
+            pictureBoxDG3_BAP.TabStop = false;
+            // 
+            // pictureBoxDG4_BAP
+            // 
+            pictureBoxDG4_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG4_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG4_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG4_BAP.Location = new System.Drawing.Point(24, 2);
+            pictureBoxDG4_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG4_BAP.Name = "pictureBoxDG4_BAP";
+            pictureBoxDG4_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG4_BAP.TabIndex = 3;
+            pictureBoxDG4_BAP.TabStop = false;
+            // 
+            // pictureBoxDG5_BAP
+            // 
+            pictureBoxDG5_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG5_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG5_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG5_BAP.Location = new System.Drawing.Point(32, 2);
+            pictureBoxDG5_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG5_BAP.Name = "pictureBoxDG5_BAP";
+            pictureBoxDG5_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG5_BAP.TabIndex = 4;
+            pictureBoxDG5_BAP.TabStop = false;
+            // 
+            // pictureBoxDG6_BAP
+            // 
+            pictureBoxDG6_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG6_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG6_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG6_BAP.Location = new System.Drawing.Point(40, 2);
+            pictureBoxDG6_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG6_BAP.Name = "pictureBoxDG6_BAP";
+            pictureBoxDG6_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG6_BAP.TabIndex = 5;
+            pictureBoxDG6_BAP.TabStop = false;
+            // 
+            // pictureBoxDG7_BAP
+            // 
+            pictureBoxDG7_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG7_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG7_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG7_BAP.Location = new System.Drawing.Point(48, 2);
+            pictureBoxDG7_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG7_BAP.Name = "pictureBoxDG7_BAP";
+            pictureBoxDG7_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG7_BAP.TabIndex = 6;
+            pictureBoxDG7_BAP.TabStop = false;
+            // 
+            // pictureBoxDG8_BAP
+            // 
+            pictureBoxDG8_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG8_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG8_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG8_BAP.Location = new System.Drawing.Point(56, 2);
+            pictureBoxDG8_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG8_BAP.Name = "pictureBoxDG8_BAP";
+            pictureBoxDG8_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG8_BAP.TabIndex = 7;
+            pictureBoxDG8_BAP.TabStop = false;
+            // 
+            // pictureBoxDG9_BAP
+            // 
+            pictureBoxDG9_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG9_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG9_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG9_BAP.Location = new System.Drawing.Point(64, 2);
+            pictureBoxDG9_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG9_BAP.Name = "pictureBoxDG9_BAP";
+            pictureBoxDG9_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG9_BAP.TabIndex = 8;
+            pictureBoxDG9_BAP.TabStop = false;
+            // 
+            // pictureBoxDG10_BAP
+            // 
+            pictureBoxDG10_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG10_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG10_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG10_BAP.Location = new System.Drawing.Point(72, 2);
+            pictureBoxDG10_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG10_BAP.Name = "pictureBoxDG10_BAP";
+            pictureBoxDG10_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG10_BAP.TabIndex = 9;
+            pictureBoxDG10_BAP.TabStop = false;
+            // 
+            // pictureBoxDG11_BAP
+            // 
+            pictureBoxDG11_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG11_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG11_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG11_BAP.Location = new System.Drawing.Point(80, 2);
+            pictureBoxDG11_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG11_BAP.Name = "pictureBoxDG11_BAP";
+            pictureBoxDG11_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG11_BAP.TabIndex = 10;
+            pictureBoxDG11_BAP.TabStop = false;
+            // 
+            // pictureBoxDG12_BAP
+            // 
+            pictureBoxDG12_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG12_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG12_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG12_BAP.Location = new System.Drawing.Point(88, 2);
+            pictureBoxDG12_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG12_BAP.Name = "pictureBoxDG12_BAP";
+            pictureBoxDG12_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG12_BAP.TabIndex = 11;
+            pictureBoxDG12_BAP.TabStop = false;
+            // 
+            // pictureBoxDG13_BAP
+            // 
+            pictureBoxDG13_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG13_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG13_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG13_BAP.Location = new System.Drawing.Point(96, 2);
+            pictureBoxDG13_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG13_BAP.Name = "pictureBoxDG13_BAP";
+            pictureBoxDG13_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG13_BAP.TabIndex = 12;
+            pictureBoxDG13_BAP.TabStop = false;
+            // 
+            // pictureBoxDG14_BAP
+            // 
+            pictureBoxDG14_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG14_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG14_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG14_BAP.Location = new System.Drawing.Point(104, 2);
+            pictureBoxDG14_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG14_BAP.Name = "pictureBoxDG14_BAP";
+            pictureBoxDG14_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG14_BAP.TabIndex = 13;
+            pictureBoxDG14_BAP.TabStop = false;
+            // 
+            // pictureBoxDG15_BAP
+            // 
+            pictureBoxDG15_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG15_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG15_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG15_BAP.Location = new System.Drawing.Point(112, 2);
+            pictureBoxDG15_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG15_BAP.Name = "pictureBoxDG15_BAP";
+            pictureBoxDG15_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG15_BAP.TabIndex = 14;
+            pictureBoxDG15_BAP.TabStop = false;
+            // 
+            // pictureBoxDG16_BAP
+            // 
+            pictureBoxDG16_BAP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            pictureBoxDG16_BAP.BackColor = System.Drawing.Color.White;
+            pictureBoxDG16_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxDG16_BAP.Location = new System.Drawing.Point(120, 2);
+            pictureBoxDG16_BAP.Margin = new System.Windows.Forms.Padding(0);
+            pictureBoxDG16_BAP.Name = "pictureBoxDG16_BAP";
+            pictureBoxDG16_BAP.Size = new System.Drawing.Size(6, 8);
+            pictureBoxDG16_BAP.TabIndex = 15;
+            pictureBoxDG16_BAP.TabStop = false;
+            // 
+            // label31
+            // 
+            label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label31.AutoSize = true;
+            label31.Location = new System.Drawing.Point(23, 119);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(24, 17);
+            label31.TabIndex = 13;
+            // 
+            // pictureBoxAA_BAP
+            // 
+            pictureBoxAA_BAP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            pictureBoxAA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxAA_BAP.Enabled = false;
+            pictureBoxAA_BAP.Location = new System.Drawing.Point(3, 121);
+            pictureBoxAA_BAP.Name = "pictureBoxAA_BAP";
+            pictureBoxAA_BAP.Size = new System.Drawing.Size(14, 14);
+            pictureBoxAA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxAA_BAP.TabIndex = 9;
+            pictureBoxAA_BAP.TabStop = false;
+            // 
+            // label30
+            // 
+            label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label30.AutoSize = true;
+            label30.Location = new System.Drawing.Point(23, 21);
+            label30.Name = "label30";
+            label30.Size = new System.Drawing.Size(33, 17);
+            label30.TabIndex = 11;
+            // 
+            // pictureBoxEAC_BAP
+            // 
+            pictureBoxEAC_BAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            pictureBoxEAC_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxEAC_BAP.Location = new System.Drawing.Point(3, 23);
+            pictureBoxEAC_BAP.Name = "pictureBoxEAC_BAP";
+            pictureBoxEAC_BAP.Size = new System.Drawing.Size(14, 14);
+            pictureBoxEAC_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxEAC_BAP.TabIndex = 6;
+            pictureBoxEAC_BAP.TabStop = false;
+            // 
+            // pictureBoxCA_BAP
+            // 
+            pictureBoxCA_BAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            pictureBoxCA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxCA_BAP.Location = new System.Drawing.Point(25, 43);
+            pictureBoxCA_BAP.Name = "pictureBoxCA_BAP";
+            pictureBoxCA_BAP.Size = new System.Drawing.Size(14, 14);
+            pictureBoxCA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxCA_BAP.TabIndex = 7;
+            pictureBoxCA_BAP.TabStop = false;
+            // 
+            // label29
+            // 
+            label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label29.AutoSize = true;
+            label29.Location = new System.Drawing.Point(47, 41);
+            label29.Name = "label29";
+            label29.Size = new System.Drawing.Size(25, 17);
+            label29.TabIndex = 14;
+            // 
+            // pictureBoxTA_BAP
+            // 
+            pictureBoxTA_BAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            pictureBoxTA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxTA_BAP.Location = new System.Drawing.Point(25, 63);
+            pictureBoxTA_BAP.Name = "pictureBoxTA_BAP";
+            pictureBoxTA_BAP.Size = new System.Drawing.Size(14, 14);
+            pictureBoxTA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxTA_BAP.TabIndex = 8;
+            pictureBoxTA_BAP.TabStop = false;
+            // 
+            // pictureBoxPA_BAP
+            // 
+            pictureBoxPA_BAP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            pictureBoxPA_BAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxPA_BAP.Enabled = false;
+            pictureBoxPA_BAP.Location = new System.Drawing.Point(3, 83);
+            pictureBoxPA_BAP.Name = "pictureBoxPA_BAP";
+            pictureBoxPA_BAP.Size = new System.Drawing.Size(14, 14);
+            pictureBoxPA_BAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxPA_BAP.TabIndex = 16;
+            pictureBoxPA_BAP.TabStop = false;
+            // 
+            // label28
+            // 
+            label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label28.AutoSize = true;
+            label28.Location = new System.Drawing.Point(47, 61);
+            label28.Name = "label28";
+            label28.Size = new System.Drawing.Size(24, 17);
+            label28.TabIndex = 15;
+            // 
+            // label27
+            // 
+            label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label27.AutoSize = true;
+            label27.Location = new System.Drawing.Point(23, 1);
+            label27.Name = "label27";
+            label27.Size = new System.Drawing.Size(78, 17);
+            label27.TabIndex = 10;
+            // 
+            // label26
+            // 
+            label26.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            label26.Font = new System.Drawing.Font("Tahoma", 6.75F);
+            label26.ForeColor = Color.Black;
+            label26.Location = new System.Drawing.Point(20, 104);
+            label26.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            label26.Name = "label26";
+            label26.Size = new System.Drawing.Size(24, 12);
+            label26.TabIndex = 0;
+            label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label25
+            // 
+            label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label25.AutoSize = true;
+            label25.Location = new System.Drawing.Point(23, 81);
+            label25.Name = "label25";
+            label25.Size = new System.Drawing.Size(24, 17);
+            label25.TabIndex = 17;
+            // 
+            // pictureBoxBAP
+            // 
+            pictureBoxBAP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            pictureBoxBAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pictureBoxBAP.Location = new System.Drawing.Point(3, 3);
+            pictureBoxBAP.Name = "pictureBoxBAP";
+            pictureBoxBAP.Size = new System.Drawing.Size(14, 14);
+            pictureBoxBAP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxBAP.TabIndex = 5;
+            pictureBoxBAP.TabStop = false;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new System.Drawing.Font("Tahoma", 6.75F);
+            label24.ForeColor = Color.Black;
+            label24.Location = new System.Drawing.Point(172, 104);
+            label24.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            label24.Name = "label24";
+            label24.Size = new System.Drawing.Size(37, 14);
+            label24.TabIndex = 1;
+            label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // MRZForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2320,37 +2248,6 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tabPageIDL.ResumeLayout(false);
-            groupBoxAccessControlIDL.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxBAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPA_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxTA_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxCA_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxEAC_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxAA_BAP).EndInit();
-            tableLayoutPanelPA_BAP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG16_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG15_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG14_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG13_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG12_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG11_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG10_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG9_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG8_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG7_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG6_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG5_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG4_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG3_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG2_BAP).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDG1_BAP).EndInit();
-            groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPictureIdl).EndInit();
-            groupBoxPersonalDataIDL.ResumeLayout(false);
-            tableLayoutPanel6.ResumeLayout(false);
-            tableLayoutPanel6.PerformLayout();
             groupBoxReadingState.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
@@ -2361,6 +2258,29 @@
             groupBoxLogs.ResumeLayout(false);
             groupBoxConfiguration.ResumeLayout(false);
             groupBoxConfiguration.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPictureIdl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG1_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG2_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG3_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG4_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG5_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG6_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG7_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG8_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG9_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG10_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG11_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG12_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG13_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG14_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG15_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDG16_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAA_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEAC_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCA_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxTA_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPA_BAP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBAP).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2429,62 +2349,6 @@
         private System.Windows.Forms.TextBox textBoxDocumentType;
         private System.Windows.Forms.TextBox textBoxIssuer;
         private System.Windows.Forms.TextBox textBoxOptionalData;
-        private System.Windows.Forms.TabPage tabPageIDL;
-        private System.Windows.Forms.GroupBox groupBoxAccessControlIDL;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.PictureBox pictureBoxBAP;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPA_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG16_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG15_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG14_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG13_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG12_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG11_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG10_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG9_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG8_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG7_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG6_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG5_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG4_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG3_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG2_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxDG1_BAP;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.PictureBox pictureBoxPA_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxTA_BAP;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.PictureBox pictureBoxCA_BAP;
-        private System.Windows.Forms.PictureBox pictureBoxEAC_BAP;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.PictureBox pictureBoxAA_BAP;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonImageRightIdl;
-        private System.Windows.Forms.Button buttonImageLeftIdl;
-        private System.Windows.Forms.PictureBox pictureBoxPictureIdl;
-        private System.Windows.Forms.GroupBox groupBoxPersonalDataIDL;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBoxFamilyName;
-        private System.Windows.Forms.TextBox textBoxGivenNames;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBoxBirthDateIDL;
-        private System.Windows.Forms.TextBox textBoxIssuingDate;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBoxExpiryDateIDL;
-        private System.Windows.Forms.TextBox textBoxIssuingCountry;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBoxLicenceNumber;
-        private System.Windows.Forms.TextBox textBoxIssuingAuthority;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.GroupBox groupBoxReadingState;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBoxChipRead;
@@ -2498,8 +2362,6 @@
         private System.Windows.Forms.GroupBox groupBoxLogs;
         private System.Windows.Forms.ListView listViewLogs;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.GroupBox groupBoxAntenna;
         private System.Windows.Forms.Label labelBackAntenna;
         private System.Windows.Forms.Label labelFrontAntenna;
@@ -2526,7 +2388,64 @@
         private System.Windows.Forms.Button buttonExportExcel;
         private System.Windows.Forms.Button buttonExportJson;
         private System.Windows.Forms.CheckedListBox comboBoxFields;
-        
+        private System.Windows.Forms.TabPage tabPageIDL;
+        private System.Windows.Forms.GroupBox groupBoxAccessControlIDL;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxPersonalDataIDL;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox textBoxIssuingAuthority;
+        private System.Windows.Forms.TextBox textBoxLicenceNumber;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBoxIssuingCountry;
+        private System.Windows.Forms.TextBox textBoxExpiryDateIDL;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBoxIssuingDate;
+        private System.Windows.Forms.TextBox textBoxBirthDateIDL;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBoxGivenNames;
+        private System.Windows.Forms.TextBox textBoxFamilyName;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.PictureBox pictureBoxPictureIdl;
+        private System.Windows.Forms.Button buttonImageLeftIdl;
+        private System.Windows.Forms.Button buttonImageRightIdl;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPA_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG1_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG2_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG3_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG4_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG5_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG6_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG7_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG8_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG9_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG10_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG11_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG12_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG13_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG14_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG15_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxDG16_BAP;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.PictureBox pictureBoxAA_BAP;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pictureBoxEAC_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxCA_BAP;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox pictureBoxTA_BAP;
+        private System.Windows.Forms.PictureBox pictureBoxPA_BAP;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBoxBAP;
+        private System.Windows.Forms.Label label24;
     }
 }
 
