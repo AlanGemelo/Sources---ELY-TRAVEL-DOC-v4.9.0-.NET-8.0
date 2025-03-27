@@ -1062,7 +1062,7 @@ namespace ELY_TRAVEL_DOC
             textBoxName.BackColor = System.Drawing.SystemColors.Window;
             textBoxName.Location = new System.Drawing.Point(3, 29);
             textBoxName.Name = "textBoxName";
-            textBoxName.ReadOnly = true;
+            textBoxName.ReadOnly = false;
             textBoxName.Size = new System.Drawing.Size(164, 24);
             textBoxName.TabIndex = 1;
             // 
@@ -1071,7 +1071,7 @@ namespace ELY_TRAVEL_DOC
             textBoxSurname.BackColor = System.Drawing.SystemColors.Window;
             textBoxSurname.Location = new System.Drawing.Point(173, 29);
             textBoxSurname.Name = "textBoxSurname";
-            textBoxSurname.ReadOnly = true;
+            textBoxSurname.ReadOnly = false;
             textBoxSurname.Size = new System.Drawing.Size(164, 24);
             textBoxSurname.TabIndex = 11;
             // 
@@ -1080,7 +1080,7 @@ namespace ELY_TRAVEL_DOC
             textBoxBirthDate.BackColor = System.Drawing.SystemColors.Window;
             textBoxBirthDate.Location = new System.Drawing.Point(3, 81);
             textBoxBirthDate.Name = "textBoxBirthDate";
-            textBoxBirthDate.ReadOnly = true;
+            textBoxBirthDate.ReadOnly = false;
             textBoxBirthDate.Size = new System.Drawing.Size(164, 24);
             textBoxBirthDate.TabIndex = 3;
             // 
@@ -1089,7 +1089,7 @@ namespace ELY_TRAVEL_DOC
             textBoxNationality.BackColor = System.Drawing.SystemColors.Window;
             textBoxNationality.Location = new System.Drawing.Point(173, 81);
             textBoxNationality.Name = "textBoxNationality";
-            textBoxNationality.ReadOnly = true;
+            textBoxNationality.ReadOnly = false;
             textBoxNationality.Size = new System.Drawing.Size(164, 24);
             textBoxNationality.TabIndex = 13;
             // 
@@ -1098,7 +1098,7 @@ namespace ELY_TRAVEL_DOC
             textBoxSex.BackColor = System.Drawing.SystemColors.Window;
             textBoxSex.Location = new System.Drawing.Point(3, 133);
             textBoxSex.Name = "textBoxSex";
-            textBoxSex.ReadOnly = true;
+            textBoxSex.ReadOnly = false;
             textBoxSex.Size = new System.Drawing.Size(164, 24);
             textBoxSex.TabIndex = 5;
             // 
@@ -1107,7 +1107,7 @@ namespace ELY_TRAVEL_DOC
             textBoxExpiryDate.BackColor = System.Drawing.SystemColors.Window;
             textBoxExpiryDate.Location = new System.Drawing.Point(173, 133);
             textBoxExpiryDate.Name = "textBoxExpiryDate";
-            textBoxExpiryDate.ReadOnly = true;
+            textBoxExpiryDate.ReadOnly = false;
             textBoxExpiryDate.Size = new System.Drawing.Size(164, 24);
             textBoxExpiryDate.TabIndex = 15;
             // 
@@ -1116,7 +1116,7 @@ namespace ELY_TRAVEL_DOC
             textBoxDocumentNumber.BackColor = System.Drawing.SystemColors.Window;
             textBoxDocumentNumber.Location = new System.Drawing.Point(3, 185);
             textBoxDocumentNumber.Name = "textBoxDocumentNumber";
-            textBoxDocumentNumber.ReadOnly = true;
+            textBoxDocumentNumber.ReadOnly = false;
             textBoxDocumentNumber.Size = new System.Drawing.Size(164, 24);
             textBoxDocumentNumber.TabIndex = 7;
             // 
@@ -1125,7 +1125,7 @@ namespace ELY_TRAVEL_DOC
             textBoxDocumentType.BackColor = System.Drawing.SystemColors.Window;
             textBoxDocumentType.Location = new System.Drawing.Point(173, 185);
             textBoxDocumentType.Name = "textBoxDocumentType";
-            textBoxDocumentType.ReadOnly = true;
+            textBoxDocumentType.ReadOnly = false;
             textBoxDocumentType.Size = new System.Drawing.Size(164, 24);
             textBoxDocumentType.TabIndex = 17;
             // 
@@ -1134,7 +1134,7 @@ namespace ELY_TRAVEL_DOC
             textBoxIssuer.BackColor = System.Drawing.SystemColors.Window;
             textBoxIssuer.Location = new System.Drawing.Point(3, 237);
             textBoxIssuer.Name = "textBoxIssuer";
-            textBoxIssuer.ReadOnly = true;
+            textBoxIssuer.ReadOnly = false;
             textBoxIssuer.Size = new System.Drawing.Size(164, 24);
             textBoxIssuer.TabIndex = 9;
             // 
@@ -1143,7 +1143,7 @@ namespace ELY_TRAVEL_DOC
             textBoxOptionalData.BackColor = System.Drawing.SystemColors.Window;
             textBoxOptionalData.Location = new System.Drawing.Point(173, 237);
             textBoxOptionalData.Name = "textBoxOptionalData";
-            textBoxOptionalData.ReadOnly = true;
+            textBoxOptionalData.ReadOnly = false;
             textBoxOptionalData.Size = new System.Drawing.Size(164, 24);
             textBoxOptionalData.TabIndex = 19;
             // 
