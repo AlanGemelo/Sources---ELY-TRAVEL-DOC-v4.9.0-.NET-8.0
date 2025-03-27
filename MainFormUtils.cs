@@ -22,7 +22,7 @@ using static ElyMRTDDotNet.ElyMRTDDotNet;
 
 namespace ELY_TRAVEL_DOC
 {
-    public partial class MainForm
+    public partial class MRZForm
     {
         #region Variables
         private const float fDpiStandard = 96.0F;
@@ -32,7 +32,7 @@ namespace ELY_TRAVEL_DOC
 
         private delegate void _WaitForCardAndReadDocumentDelegate(bool lastCardState);
         private delegate void _ClearDelegate();
-        private delegate void _PrintListViewDelegate(String msg, MainForm.Status status);
+        private delegate void _PrintListViewDelegate(String msg, MRZForm.Status status);
         private delegate void _UpdatePictureBoxDelegate(PictureBox pBox, bool value);
         private delegate void _UpdatePictureBoxesDg(PictureBox box, int res);
         private delegate void _PrintTextBoxMrzDelegate(String msg);
@@ -236,9 +236,9 @@ namespace ELY_TRAVEL_DOC
         #endregion
 
 
-        #region Delegates MainForm
+        #region Delegates MRZForm
         public enum Status { Normal = 0, Success = 1, Error = 2, Warning = 3};
-        public void PrintListView(String msg, MainForm.Status status = Status.Normal)
+        public void PrintListView(String msg, MRZForm.Status status = Status.Normal)
         {
             if (this.InvokeRequired)
             {

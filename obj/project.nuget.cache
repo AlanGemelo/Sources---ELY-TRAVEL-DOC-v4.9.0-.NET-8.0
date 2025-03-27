@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7DxsVwWSNEk=",
+  "dgSpecHash": "elex8E7OBf4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gemelo\\Desktop\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj",
+  "projectFilePath": "C:\\Users\\gemelo\\Turoriales\\Santoro\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gemelo\\.nuget\\packages\\epplus\\5.8.3\\epplus.5.8.3.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\freeimage.standard\\4.3.8\\freeimage.standard.4.3.8.nupkg.sha512",
@@ -139,6 +139,8 @@
     "C:\\Users\\gemelo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\system.text.encoding.codepages\\9.0.0\\system.text.encoding.codepages.9.0.0.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\gemelo\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\gemelo\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\system.threading.accesscontrol\\9.0.0\\system.threading.accesscontrol.9.0.0.nupkg.sha512",
@@ -151,5 +153,16 @@
     "C:\\Users\\gemelo\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\gemelo\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Text.Json\" 7.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

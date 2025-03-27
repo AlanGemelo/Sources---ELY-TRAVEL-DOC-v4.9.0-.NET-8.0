@@ -13,10 +13,11 @@ using System.Linq.Expressions;
 using System.Threading;
 using static ElyMRTDDotNet.ElyMRTDDotNet;
 using ELY_TRAVEL_DOC.Services;
+using System.Text.Json;
 
 namespace ELY_TRAVEL_DOC
 {
-    public partial class MainForm : Form, IDisposable
+    public partial class MRZForm : Form, IDisposable
     {
         #region Variables
         // Variables to read chip
@@ -70,14 +71,20 @@ namespace ELY_TRAVEL_DOC
         private readonly ChipService chipService;
         private readonly ExcelExportService excelExportService = new ExcelExportService();
         private readonly FilterService filterService = new FilterService();
+        private readonly JsonExportService jsonExportService = new JsonExportService();
         private List<string> selectedFields = new List<string>();
 
         private List<PersonalDataDto> personalDataList = new List<PersonalDataDto>();
 
+        private string _language;
+
         #region Constructor
-        public MainForm()
+        public MRZForm(string language)
         {
+            
             InitializeComponent();
+                _language = language;
+       
             this.Icon = new Icon("assets/icon.ico");
             InitializeGuiHelpers();
 
@@ -125,14 +132,178 @@ namespace ELY_TRAVEL_DOC
             chipService = new ChipService();
 
             buttonExportExcel.Click += ButtonExportExcel_Click;
+            buttonExportJson.Click += ButtonExportJson_Click;
             comboBoxFields.Items.AddRange(new string[] { "Name", "Surname", "BirthDate", "Nationality", "Sex", "ExpiryDate", "DocumentNumber", "DocumentType", "Issuer", "OptionalData" });
             comboBoxFields.SelectedIndexChanged += ComboBoxFields_SelectedIndexChanged;
+
+            TranslateUI();
         }
         #endregion
 
+        private void TranslateUI()
+        {
+                TranslateComboBoxFields();
+
+
+            switch (_language)
+            {
+                case "es":
+                    TranslateToSpanish();
+                    break;
+                case "en":
+                    TranslateToEnglish();
+                    break;
+                case "fr":
+                    TranslateToFrench();
+                    break;
+            }
+        }
+
+private void TranslateComboBoxFields()
+{
+    comboBoxFields.Items.Clear();
+    
+    switch (_language)
+    {
+        case "es":
+            comboBoxFields.Items.AddRange(new string[] { 
+                "Nombre", 
+                "Apellido", 
+                "Fecha de Nacimiento", 
+                "Nacionalidad", 
+                "Sexo", 
+                "Fecha de Expiración", 
+                "Número de Documento", 
+                "Tipo de Documento", 
+                "Emisor", 
+                "Datos Opcionales"
+            });
+            break;
+            
+        case "en":
+            comboBoxFields.Items.AddRange(new string[] { 
+                "Name", 
+                "Surname", 
+                "Birth Date", 
+                "Nationality", 
+                "Sex", 
+                "Expiry Date", 
+                "Document Number", 
+                "Document Type", 
+                "Issuer", 
+                "Optional Data"
+            });
+            break;
+            
+        case "fr":
+            comboBoxFields.Items.AddRange(new string[] {
+                "Nom",
+                "Prénom",
+                "Date de naissance",
+                "Nationalité",
+                "Sexe",
+                "Date d'expiration",
+                "Numéro de document",
+                "Type de document",
+                "Émetteur",
+                "Données optionnelles"
+            });
+            break;
+    }}
+
+        private void TranslateToSpanish()
+        {
+            this.Text = "Formulario MRZ";
+            
+            buttonAceptar.Text = "Aceptar";
+            buttonExportExcel.Text = "Exportar a Excel";
+            buttonExportJson.Text = "Exportar a JSON";
+            groupBoxPersonalData.Text = "Datos Personales";
+            label1.Text = "Nombre";
+            label2.Text = "Apellido";
+            label3.Text = "Fecha de Nacimiento (dd/mm/aa)";
+            label4.Text = "Nacionalidad";
+            label5.Text = "Sexo";
+            label6.Text = "Válido hasta (dd/mm/aa)";
+            label7.Text = "Número de Documento";
+            label8.Text = "Tipo de Documento";
+            label9.Text = "Emisor";
+            label10.Text = "Datos Opcionales";
+             groupBoxConfiguration.Text = "Configuración";
+    buttonRead.Text = "Leer";
+    buttonOptions.Text = "Opciones";
+    buttonUpdateAntenna.Text = "Actualizar Antena";
+    
+    
+    
+
+
+    // Lectura
+    // groupBoxReading.Text = "Lectura";
+    buttonLastLog.Text = "Último Registro";
+    
+    
+            // ...traduce otros elementos...
+        }
+
+        private void TranslateToEnglish()
+        {
+            this.Text = "MRZ Form";
+            buttonAceptar.Text = "Accept";
+            buttonExportExcel.Text = "Export to Excel";
+            buttonExportJson.Text = "Export to JSON";
+            groupBoxPersonalData.Text = "Personal Data";
+            label1.Text = "Name";
+            label2.Text = "Surname";
+            label3.Text = "Date of Birth (dd/mm/yy)";
+            label4.Text = "Nationality";
+            label5.Text = "Sex";
+            label6.Text = "Valid until (dd/mm/yy)";
+            label7.Text = "Document Number";
+            label8.Text = "Document Type";
+            label9.Text = "Issuer";
+            label10.Text = "Optional Data";
+                groupBoxConfiguration.Text = "Configuration";
+    buttonRead.Text = "Read";
+    buttonOptions.Text = "Options";
+    buttonUpdateAntenna.Text = "Update Antenna";
+
+    // Reading
+    // groupBoxReading.Text = "Reading";
+    buttonLastLog.Text = "Last Log";
+            // ...translate other elements...
+        }
+
+        private void TranslateToFrench()
+        {
+            this.Text = "Formulaire MRZ";
+            buttonAceptar.Text = "Accepter";
+            buttonExportExcel.Text = "Exporter vers Excel";
+            buttonExportJson.Text = "Exporter en JSON";
+            groupBoxPersonalData.Text = "Données Personnelles";
+            label1.Text = "Prénom";
+            label2.Text = "Nom";
+            label3.Text = "Date de Naissance (jj/mm/aa)";
+            label4.Text = "Nationalité";
+            label5.Text = "Sexe";
+            label6.Text = "Valide jusqu'à (jj/mm/aa)";
+            label7.Text = "Numéro de Document";
+            label8.Text = "Type de Document";
+            label9.Text = "Émetteur";
+            label10.Text = "Données Optionnelles";
+             groupBoxConfiguration.Text = "Configuration";
+    buttonRead.Text = "Lire";
+    buttonOptions.Text = "Options";
+    buttonUpdateAntenna.Text = "Mettre à jour Antenne";
+
+    // Lecture
+    // groupBoxReading.Text = "Lecture";
+    buttonLastLog.Text = "Dernier Journal";
+            // ...traduire d'autres éléments...
+        }
 
         #region Destructor
-        ~MainForm()
+        ~MRZForm()
         {
             DeInitialzeGuiHelpers();
             SetEmrtdTest(false);
@@ -160,8 +331,14 @@ namespace ELY_TRAVEL_DOC
 
 
         #region Form load
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MRZForm_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < comboBoxFields.Items.Count; i++)
+    {
+        comboBoxFields.SetItemChecked(i, true);
+    }
+            MessageBox.Show($"Idioma seleccionado: {_language}");
+
             ShowAppVersion();
         }
         #endregion
@@ -170,6 +347,7 @@ namespace ELY_TRAVEL_DOC
         #region Read MRZ
         private void ReadMrz(string szMrz)
         {
+
             if (this.InvokeRequired)
             {
                 try
@@ -764,11 +942,7 @@ namespace ELY_TRAVEL_DOC
                     }
                     else if (IsAppletTypeIdl())
                     {
-                        this.tabControl1.SelectedTab = this.tabPageIDL;
-                        if (dg1 != null && dg1.Count == 8)
-                        {
-                            DisplayMrzFieldsFromDg1(); // if DG1 exists, display its fields
-                        }
+                       
                         // [TODO]: elyMrzParser for IDL will be added later
 
                         if (formOptions.checkBoxCSV.Checked)
@@ -2315,7 +2489,7 @@ namespace ELY_TRAVEL_DOC
             bDisableImageNavigationButtons = true;
         }
 
-        private void MainForm_MouseEnter(object sender, EventArgs e)
+        private void MRZForm_MouseEnter(object sender, EventArgs e)
         {
             EnablePortraitNavigationButtons(false);
         }
@@ -2480,6 +2654,8 @@ namespace ELY_TRAVEL_DOC
 
         private void ClearPicture()
         {
+            this.textBoxMrz.Clear();
+
             pictureBoxPicture.Image = null;
         }
 
@@ -2497,6 +2673,19 @@ namespace ELY_TRAVEL_DOC
             {
                 var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
                 excelExportService.ExportPersonalDataToExcel(filteredData, selectedFields, saveFileDialog.FileName);
+                MessageBox.Show("Data exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void ButtonExportJson_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "JSON Files|*.json";
+            saveFileDialog.Title = "Save a JSON File";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var filteredData = filterService.FilterPersonalData(personalDataList, selectedFields);
+                jsonExportService.ExportPersonalDataToJson(filteredData, saveFileDialog.FileName);
                 MessageBox.Show("Data exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace ELY_TRAVEL_DOC
 {
-    partial class MainForm
+    partial class MRZForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRZForm));
             backgroundWorker = new System.ComponentModel.BackgroundWorker();
             tabControl1 = new System.Windows.Forms.TabControl();
             tabPageID = new System.Windows.Forms.TabPage();
@@ -100,6 +100,7 @@
             textBoxOptionalData = new System.Windows.Forms.TextBox();
             buttonAceptar = new System.Windows.Forms.Button();
             buttonExportExcel = new System.Windows.Forms.Button();
+            buttonExportJson = new System.Windows.Forms.Button();
             comboBoxFields = new System.Windows.Forms.CheckedListBox();
             tabPageIDL = new System.Windows.Forms.TabPage();
             groupBoxAccessControlIDL = new System.Windows.Forms.GroupBox();
@@ -289,9 +290,11 @@
             tabPageID.Controls.Add(groupBoxPersonalData);
             tabPageID.Controls.Add(buttonAceptar);
             tabPageID.Controls.Add(buttonExportExcel);
+            tabPageID.Controls.Add(buttonExportJson);
             tabPageID.Controls.Add(comboBoxFields);
-            tabPageID.Location = new System.Drawing.Point(4, 22);
-            tabPageID.Size = new System.Drawing.Size(814, 324);
+            tabPageID.Location = new System.Drawing.Point(4, 26);
+            tabPageID.Name = "tabPageID";
+            tabPageID.Size = new System.Drawing.Size(814, 320);
             tabPageID.TabIndex = 0;
             tabPageID.Text = "  eID/ePP ";
             tabPageID.MouseEnter += tabPageID_MouseEnter;
@@ -354,9 +357,9 @@
             // 
             labelBackAntenna.Anchor = System.Windows.Forms.AnchorStyles.Left;
             labelBackAntenna.AutoSize = true;
-            labelBackAntenna.Location = new System.Drawing.Point(23, 23);
+            labelBackAntenna.Location = new System.Drawing.Point(23, 21);
             labelBackAntenna.Name = "labelBackAntenna";
-            labelBackAntenna.Size = new System.Drawing.Size(29, 13);
+            labelBackAntenna.Size = new System.Drawing.Size(37, 17);
             labelBackAntenna.TabIndex = 1;
             labelBackAntenna.Text = "Back";
             // 
@@ -375,9 +378,9 @@
             // 
             labelFrontAntenna.Anchor = System.Windows.Forms.AnchorStyles.Left;
             labelFrontAntenna.AutoSize = true;
-            labelFrontAntenna.Location = new System.Drawing.Point(23, 3);
+            labelFrontAntenna.Location = new System.Drawing.Point(23, 1);
             labelFrontAntenna.Name = "labelFrontAntenna";
-            labelFrontAntenna.Size = new System.Drawing.Size(33, 13);
+            labelFrontAntenna.Size = new System.Drawing.Size(41, 17);
             labelFrontAntenna.TabIndex = 0;
             labelFrontAntenna.Text = "Front";
             // 
@@ -436,7 +439,7 @@
             label23.Location = new System.Drawing.Point(172, 104);
             label23.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(29, 11);
+            label23.Size = new System.Drawing.Size(37, 14);
             label23.TabIndex = 0;
             label23.Text = "DG16";
             label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -457,9 +460,9 @@
             label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label21.AutoSize = true;
             tableLayoutPanel3.SetColumnSpan(label21, 2);
-            label21.Location = new System.Drawing.Point(23, 83);
+            label21.Location = new System.Drawing.Point(23, 81);
             label21.Name = "label21";
-            label21.Size = new System.Drawing.Size(20, 13);
+            label21.Size = new System.Drawing.Size(24, 17);
             label21.TabIndex = 4;
             label21.Text = "PA";
             // 
@@ -467,7 +470,6 @@
             // 
             label22.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label22.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            // label22.ForeColor = System.Windows.Forms.SystemColors.ControlDark;
             label22.Location = new System.Drawing.Point(20, 104);
             label22.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             label22.Name = "label22";
@@ -481,9 +483,9 @@
             label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label16.AutoSize = true;
             tableLayoutPanel3.SetColumnSpan(label16, 2);
-            label16.Location = new System.Drawing.Point(23, 3);
+            label16.Location = new System.Drawing.Point(23, 1);
             label16.Name = "label16";
-            label16.Size = new System.Drawing.Size(63, 13);
+            label16.Size = new System.Drawing.Size(79, 17);
             label16.TabIndex = 0;
             label16.Text = "BAC / PACE";
             // 
@@ -491,9 +493,9 @@
             // 
             label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label18.AutoSize = true;
-            label18.Location = new System.Drawing.Point(47, 63);
+            label18.Location = new System.Drawing.Point(47, 61);
             label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(20, 13);
+            label18.Size = new System.Drawing.Size(24, 17);
             label18.TabIndex = 3;
             label18.Text = "TA";
             // 
@@ -524,9 +526,9 @@
             // 
             label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label20.AutoSize = true;
-            label20.Location = new System.Drawing.Point(47, 43);
+            label20.Location = new System.Drawing.Point(47, 41);
             label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(21, 13);
+            label20.Size = new System.Drawing.Size(25, 17);
             label20.TabIndex = 2;
             label20.Text = "CA";
             // 
@@ -557,9 +559,9 @@
             label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label17.AutoSize = true;
             tableLayoutPanel3.SetColumnSpan(label17, 2);
-            label17.Location = new System.Drawing.Point(23, 23);
+            label17.Location = new System.Drawing.Point(23, 21);
             label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(27, 13);
+            label17.Size = new System.Drawing.Size(33, 17);
             label17.TabIndex = 1;
             label17.Text = "EAC";
             // 
@@ -580,9 +582,9 @@
             label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label19.AutoSize = true;
             tableLayoutPanel3.SetColumnSpan(label19, 2);
-            label19.Location = new System.Drawing.Point(23, 121);
+            label19.Location = new System.Drawing.Point(23, 119);
             label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(21, 13);
+            label19.Size = new System.Drawing.Size(24, 17);
             label19.TabIndex = 5;
             label19.Text = "AA";
             // 
@@ -936,9 +938,9 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label1.Location = new System.Drawing.Point(3, 13);
+            label1.Location = new System.Drawing.Point(3, 9);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(34, 13);
+            label1.Size = new System.Drawing.Size(43, 17);
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
@@ -948,9 +950,9 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label2.Location = new System.Drawing.Point(173, 13);
+            label2.Location = new System.Drawing.Point(173, 9);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(49, 13);
+            label2.Size = new System.Drawing.Size(63, 17);
             label2.TabIndex = 10;
             label2.Text = "Surname";
             // 
@@ -960,9 +962,9 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label3.Location = new System.Drawing.Point(3, 65);
+            label3.Location = new System.Drawing.Point(3, 52);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(127, 13);
+            label3.Size = new System.Drawing.Size(89, 26);
             label3.TabIndex = 2;
             label3.Text = "Date of Birth (dd/mm/yy)";
             // 
@@ -972,9 +974,9 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label4.Location = new System.Drawing.Point(173, 65);
+            label4.Location = new System.Drawing.Point(173, 61);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(58, 13);
+            label4.Size = new System.Drawing.Size(71, 17);
             label4.TabIndex = 12;
             label4.Text = "Nationality";
             // 
@@ -984,9 +986,9 @@
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label5.Location = new System.Drawing.Point(3, 117);
+            label5.Location = new System.Drawing.Point(3, 113);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(25, 13);
+            label5.Size = new System.Drawing.Size(31, 17);
             label5.TabIndex = 4;
             label5.Text = "Sex";
             // 
@@ -996,9 +998,9 @@
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label6.Location = new System.Drawing.Point(173, 117);
+            label6.Location = new System.Drawing.Point(173, 113);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(111, 13);
+            label6.Size = new System.Drawing.Size(144, 17);
             label6.TabIndex = 14;
             label6.Text = "Valid until (dd/mm/yy)";
             // 
@@ -1008,9 +1010,9 @@
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label7.Location = new System.Drawing.Point(3, 169);
+            label7.Location = new System.Drawing.Point(3, 165);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(95, 13);
+            label7.Size = new System.Drawing.Size(126, 17);
             label7.TabIndex = 6;
             label7.Text = "Document Number";
             // 
@@ -1020,9 +1022,9 @@
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label8.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label8.Location = new System.Drawing.Point(173, 169);
+            label8.Location = new System.Drawing.Point(173, 165);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(82, 13);
+            label8.Size = new System.Drawing.Size(108, 17);
             label8.TabIndex = 16;
             label8.Text = "Document Type";
             // 
@@ -1032,9 +1034,9 @@
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label9.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label9.Location = new System.Drawing.Point(3, 221);
+            label9.Location = new System.Drawing.Point(3, 217);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(37, 13);
+            label9.Size = new System.Drawing.Size(44, 17);
             label9.TabIndex = 8;
             label9.Text = "Issuer";
             // 
@@ -1044,9 +1046,9 @@
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label10.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label10.Location = new System.Drawing.Point(173, 221);
+            label10.Location = new System.Drawing.Point(173, 217);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(73, 13);
+            label10.Size = new System.Drawing.Size(91, 17);
             label10.TabIndex = 18;
             label10.Text = "Optional Data";
             // 
@@ -1056,7 +1058,7 @@
             textBoxName.Location = new System.Drawing.Point(3, 29);
             textBoxName.Name = "textBoxName";
             textBoxName.ReadOnly = true;
-            textBoxName.Size = new System.Drawing.Size(164, 21);
+            textBoxName.Size = new System.Drawing.Size(164, 24);
             textBoxName.TabIndex = 1;
             // 
             // textBoxSurname
@@ -1065,7 +1067,7 @@
             textBoxSurname.Location = new System.Drawing.Point(173, 29);
             textBoxSurname.Name = "textBoxSurname";
             textBoxSurname.ReadOnly = true;
-            textBoxSurname.Size = new System.Drawing.Size(164, 21);
+            textBoxSurname.Size = new System.Drawing.Size(164, 24);
             textBoxSurname.TabIndex = 11;
             // 
             // textBoxBirthDate
@@ -1074,7 +1076,7 @@
             textBoxBirthDate.Location = new System.Drawing.Point(3, 81);
             textBoxBirthDate.Name = "textBoxBirthDate";
             textBoxBirthDate.ReadOnly = true;
-            textBoxBirthDate.Size = new System.Drawing.Size(164, 21);
+            textBoxBirthDate.Size = new System.Drawing.Size(164, 24);
             textBoxBirthDate.TabIndex = 3;
             // 
             // textBoxNationality
@@ -1083,7 +1085,7 @@
             textBoxNationality.Location = new System.Drawing.Point(173, 81);
             textBoxNationality.Name = "textBoxNationality";
             textBoxNationality.ReadOnly = true;
-            textBoxNationality.Size = new System.Drawing.Size(164, 21);
+            textBoxNationality.Size = new System.Drawing.Size(164, 24);
             textBoxNationality.TabIndex = 13;
             // 
             // textBoxSex
@@ -1092,7 +1094,7 @@
             textBoxSex.Location = new System.Drawing.Point(3, 133);
             textBoxSex.Name = "textBoxSex";
             textBoxSex.ReadOnly = true;
-            textBoxSex.Size = new System.Drawing.Size(164, 21);
+            textBoxSex.Size = new System.Drawing.Size(164, 24);
             textBoxSex.TabIndex = 5;
             // 
             // textBoxExpiryDate
@@ -1101,7 +1103,7 @@
             textBoxExpiryDate.Location = new System.Drawing.Point(173, 133);
             textBoxExpiryDate.Name = "textBoxExpiryDate";
             textBoxExpiryDate.ReadOnly = true;
-            textBoxExpiryDate.Size = new System.Drawing.Size(164, 21);
+            textBoxExpiryDate.Size = new System.Drawing.Size(164, 24);
             textBoxExpiryDate.TabIndex = 15;
             // 
             // textBoxDocumentNumber
@@ -1110,7 +1112,7 @@
             textBoxDocumentNumber.Location = new System.Drawing.Point(3, 185);
             textBoxDocumentNumber.Name = "textBoxDocumentNumber";
             textBoxDocumentNumber.ReadOnly = true;
-            textBoxDocumentNumber.Size = new System.Drawing.Size(164, 21);
+            textBoxDocumentNumber.Size = new System.Drawing.Size(164, 24);
             textBoxDocumentNumber.TabIndex = 7;
             // 
             // textBoxDocumentType
@@ -1119,7 +1121,7 @@
             textBoxDocumentType.Location = new System.Drawing.Point(173, 185);
             textBoxDocumentType.Name = "textBoxDocumentType";
             textBoxDocumentType.ReadOnly = true;
-            textBoxDocumentType.Size = new System.Drawing.Size(164, 21);
+            textBoxDocumentType.Size = new System.Drawing.Size(164, 24);
             textBoxDocumentType.TabIndex = 17;
             // 
             // textBoxIssuer
@@ -1128,7 +1130,7 @@
             textBoxIssuer.Location = new System.Drawing.Point(3, 237);
             textBoxIssuer.Name = "textBoxIssuer";
             textBoxIssuer.ReadOnly = true;
-            textBoxIssuer.Size = new System.Drawing.Size(164, 21);
+            textBoxIssuer.Size = new System.Drawing.Size(164, 24);
             textBoxIssuer.TabIndex = 9;
             // 
             // textBoxOptionalData
@@ -1137,7 +1139,7 @@
             textBoxOptionalData.Location = new System.Drawing.Point(173, 237);
             textBoxOptionalData.Name = "textBoxOptionalData";
             textBoxOptionalData.ReadOnly = true;
-            textBoxOptionalData.Size = new System.Drawing.Size(164, 21);
+            textBoxOptionalData.Size = new System.Drawing.Size(164, 24);
             textBoxOptionalData.TabIndex = 19;
             // 
             // buttonAceptar
@@ -1148,7 +1150,7 @@
             buttonAceptar.TabIndex = 1;
             buttonAceptar.Text = "Aceptar";
             buttonAceptar.UseVisualStyleBackColor = true;
-            buttonAceptar.Click += new System.EventHandler(buttonAceptar_Click);
+            buttonAceptar.Click += buttonAceptar_Click;
             // 
             // buttonExportExcel
             // 
@@ -1159,27 +1161,41 @@
             buttonExportExcel.Text = "Export to Excel";
             buttonExportExcel.UseVisualStyleBackColor = true;
             // 
+            // buttonExportJson
+            // 
+            buttonExportJson.Location = new System.Drawing.Point(700, 270);
+            buttonExportJson.Name = "buttonExportJson";
+            buttonExportJson.Size = new System.Drawing.Size(100, 23);
+            buttonExportJson.TabIndex = 4;
+            buttonExportJson.Text = "Export to JSON";
+            buttonExportJson.UseVisualStyleBackColor = true;
+            // 
             // comboBoxFields
             // 
             comboBoxFields.FormattingEnabled = true;
             comboBoxFields.Location = new System.Drawing.Point(590, 14);
             comboBoxFields.Name = "comboBoxFields";
-            comboBoxFields.Size = new System.Drawing.Size(210, 182);
+            comboBoxFields.Size = new System.Drawing.Size(210, 175);
             comboBoxFields.TabIndex = 3;
-            comboBoxFields.Text = "Preferencias para exportar";
             // 
             // tabPageIDL
             // 
             tabPageIDL.Controls.Add(groupBoxAccessControlIDL);
             tabPageIDL.Controls.Add(groupBox2);
             tabPageIDL.Controls.Add(groupBoxPersonalDataIDL);
-            tabPageIDL.Location = new System.Drawing.Point(4, 22);
+            tabPageIDL.Location = new System.Drawing.Point(4, 26);
             tabPageIDL.Name = "tabPageIDL";
             tabPageIDL.Padding = new System.Windows.Forms.Padding(3);
-            tabPageIDL.Size = new System.Drawing.Size(814, 324);
+            tabPageIDL.Size = new System.Drawing.Size(814, 320);
             tabPageIDL.TabIndex = 1;
             tabPageIDL.Text = "  IDL";
             tabPageIDL.UseVisualStyleBackColor = true;
+            tabPageIDL.Visible = false;
+            tabPageIDL.Enabled = false;
+
+            // Disable and hide the button
+        // Hide the button
+            // buttonExportJson.Visible = false;
             // 
             // groupBoxAccessControlIDL
             // 
@@ -1234,7 +1250,7 @@
             label24.Location = new System.Drawing.Point(172, 104);
             label24.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(29, 11);
+            label24.Size = new System.Drawing.Size(37, 14);
             label24.TabIndex = 1;
             label24.Text = "DG16";
             label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1255,9 +1271,9 @@
             label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label25.AutoSize = true;
             tableLayoutPanel4.SetColumnSpan(label25, 2);
-            label25.Location = new System.Drawing.Point(23, 83);
+            label25.Location = new System.Drawing.Point(23, 81);
             label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(20, 13);
+            label25.Size = new System.Drawing.Size(24, 17);
             label25.TabIndex = 17;
             label25.Text = "PA";
             // 
@@ -1279,9 +1295,9 @@
             label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label27.AutoSize = true;
             tableLayoutPanel4.SetColumnSpan(label27, 2);
-            label27.Location = new System.Drawing.Point(23, 3);
+            label27.Location = new System.Drawing.Point(23, 1);
             label27.Name = "label27";
-            label27.Size = new System.Drawing.Size(62, 13);
+            label27.Size = new System.Drawing.Size(78, 17);
             label27.TabIndex = 10;
             label27.Text = "BAP / PACE";
             // 
@@ -1289,9 +1305,9 @@
             // 
             label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label28.AutoSize = true;
-            label28.Location = new System.Drawing.Point(47, 63);
+            label28.Location = new System.Drawing.Point(47, 61);
             label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(20, 13);
+            label28.Size = new System.Drawing.Size(24, 17);
             label28.TabIndex = 15;
             label28.Text = "TA";
             // 
@@ -1322,9 +1338,9 @@
             // 
             label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label29.AutoSize = true;
-            label29.Location = new System.Drawing.Point(47, 43);
+            label29.Location = new System.Drawing.Point(47, 41);
             label29.Name = "label29";
-            label29.Size = new System.Drawing.Size(21, 13);
+            label29.Size = new System.Drawing.Size(25, 17);
             label29.TabIndex = 14;
             label29.Text = "CA";
             // 
@@ -1355,9 +1371,9 @@
             label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label30.AutoSize = true;
             tableLayoutPanel4.SetColumnSpan(label30, 2);
-            label30.Location = new System.Drawing.Point(23, 23);
+            label30.Location = new System.Drawing.Point(23, 21);
             label30.Name = "label30";
-            label30.Size = new System.Drawing.Size(27, 13);
+            label30.Size = new System.Drawing.Size(33, 17);
             label30.TabIndex = 11;
             label30.Text = "EAC";
             // 
@@ -1378,9 +1394,9 @@
             label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label31.AutoSize = true;
             tableLayoutPanel4.SetColumnSpan(label31, 2);
-            label31.Location = new System.Drawing.Point(23, 121);
+            label31.Location = new System.Drawing.Point(23, 119);
             label31.Name = "label31";
-            label31.Size = new System.Drawing.Size(21, 13);
+            label31.Size = new System.Drawing.Size(24, 17);
             label31.TabIndex = 13;
             label31.Text = "AA";
             // 
@@ -1730,9 +1746,9 @@
             label40.AutoSize = true;
             label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label40.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label40.Location = new System.Drawing.Point(173, 169);
+            label40.Location = new System.Drawing.Point(173, 165);
             label40.Name = "label40";
-            label40.Size = new System.Drawing.Size(59, 13);
+            label40.Size = new System.Drawing.Size(72, 17);
             label40.TabIndex = 48;
             label40.Text = "Categories";
             // 
@@ -1751,9 +1767,9 @@
             label32.AutoSize = true;
             label32.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label32.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label32.Location = new System.Drawing.Point(3, 169);
+            label32.Location = new System.Drawing.Point(3, 165);
             label32.Name = "label32";
-            label32.Size = new System.Drawing.Size(82, 13);
+            label32.Size = new System.Drawing.Size(106, 17);
             label32.TabIndex = 47;
             label32.Text = "Licence Number";
             // 
@@ -1763,7 +1779,7 @@
             textBoxFamilyName.Location = new System.Drawing.Point(3, 29);
             textBoxFamilyName.Name = "textBoxFamilyName";
             textBoxFamilyName.ReadOnly = true;
-            textBoxFamilyName.Size = new System.Drawing.Size(164, 21);
+            textBoxFamilyName.Size = new System.Drawing.Size(164, 24);
             textBoxFamilyName.TabIndex = 10;
             // 
             // textBoxGivenNames
@@ -1772,7 +1788,7 @@
             textBoxGivenNames.Location = new System.Drawing.Point(173, 29);
             textBoxGivenNames.Name = "textBoxGivenNames";
             textBoxGivenNames.ReadOnly = true;
-            textBoxGivenNames.Size = new System.Drawing.Size(164, 21);
+            textBoxGivenNames.Size = new System.Drawing.Size(164, 24);
             textBoxGivenNames.TabIndex = 11;
             // 
             // label33
@@ -1781,9 +1797,9 @@
             label33.AutoSize = true;
             label33.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label33.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label33.Location = new System.Drawing.Point(173, 117);
+            label33.Location = new System.Drawing.Point(173, 113);
             label33.Name = "label33";
-            label33.Size = new System.Drawing.Size(83, 13);
+            label33.Size = new System.Drawing.Size(105, 17);
             label33.TabIndex = 46;
             label33.Text = "Issuing Country";
             // 
@@ -1793,7 +1809,7 @@
             textBoxBirthDateIDL.Location = new System.Drawing.Point(3, 81);
             textBoxBirthDateIDL.Name = "textBoxBirthDateIDL";
             textBoxBirthDateIDL.ReadOnly = true;
-            textBoxBirthDateIDL.Size = new System.Drawing.Size(164, 21);
+            textBoxBirthDateIDL.Size = new System.Drawing.Size(164, 24);
             textBoxBirthDateIDL.TabIndex = 12;
             // 
             // textBoxIssuingDate
@@ -1802,7 +1818,7 @@
             textBoxIssuingDate.Location = new System.Drawing.Point(173, 81);
             textBoxIssuingDate.Name = "textBoxIssuingDate";
             textBoxIssuingDate.ReadOnly = true;
-            textBoxIssuingDate.Size = new System.Drawing.Size(164, 21);
+            textBoxIssuingDate.Size = new System.Drawing.Size(164, 24);
             textBoxIssuingDate.TabIndex = 13;
             // 
             // label34
@@ -1811,9 +1827,9 @@
             label34.AutoSize = true;
             label34.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label34.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label34.Location = new System.Drawing.Point(173, 65);
+            label34.Location = new System.Drawing.Point(173, 61);
             label34.Name = "label34";
-            label34.Size = new System.Drawing.Size(67, 13);
+            label34.Size = new System.Drawing.Size(83, 17);
             label34.TabIndex = 45;
             label34.Text = "Issuing Date";
             // 
@@ -1823,7 +1839,7 @@
             textBoxExpiryDateIDL.Location = new System.Drawing.Point(3, 133);
             textBoxExpiryDateIDL.Name = "textBoxExpiryDateIDL";
             textBoxExpiryDateIDL.ReadOnly = true;
-            textBoxExpiryDateIDL.Size = new System.Drawing.Size(164, 21);
+            textBoxExpiryDateIDL.Size = new System.Drawing.Size(164, 24);
             textBoxExpiryDateIDL.TabIndex = 14;
             // 
             // textBoxIssuingCountry
@@ -1832,7 +1848,7 @@
             textBoxIssuingCountry.Location = new System.Drawing.Point(173, 133);
             textBoxIssuingCountry.Name = "textBoxIssuingCountry";
             textBoxIssuingCountry.ReadOnly = true;
-            textBoxIssuingCountry.Size = new System.Drawing.Size(164, 21);
+            textBoxIssuingCountry.Size = new System.Drawing.Size(164, 24);
             textBoxIssuingCountry.TabIndex = 15;
             // 
             // label35
@@ -1841,9 +1857,9 @@
             label35.AutoSize = true;
             label35.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label35.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label35.Location = new System.Drawing.Point(173, 13);
+            label35.Location = new System.Drawing.Point(173, 9);
             label35.Name = "label35";
-            label35.Size = new System.Drawing.Size(69, 13);
+            label35.Size = new System.Drawing.Size(87, 17);
             label35.TabIndex = 44;
             label35.Text = "Given Names";
             // 
@@ -1853,9 +1869,9 @@
             label37.AutoSize = true;
             label37.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label37.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label37.Location = new System.Drawing.Point(3, 117);
+            label37.Location = new System.Drawing.Point(3, 113);
             label37.Name = "label37";
-            label37.Size = new System.Drawing.Size(63, 13);
+            label37.Size = new System.Drawing.Size(80, 17);
             label37.TabIndex = 42;
             label37.Text = "Expiry Date";
             // 
@@ -1865,7 +1881,7 @@
             textBoxLicenceNumber.Location = new System.Drawing.Point(3, 185);
             textBoxLicenceNumber.Name = "textBoxLicenceNumber";
             textBoxLicenceNumber.ReadOnly = true;
-            textBoxLicenceNumber.Size = new System.Drawing.Size(164, 21);
+            textBoxLicenceNumber.Size = new System.Drawing.Size(164, 24);
             textBoxLicenceNumber.TabIndex = 16;
             // 
             // textBoxIssuingAuthority
@@ -1874,7 +1890,7 @@
             textBoxIssuingAuthority.Location = new System.Drawing.Point(3, 237);
             textBoxIssuingAuthority.Name = "textBoxIssuingAuthority";
             textBoxIssuingAuthority.ReadOnly = true;
-            textBoxIssuingAuthority.Size = new System.Drawing.Size(164, 21);
+            textBoxIssuingAuthority.Size = new System.Drawing.Size(164, 24);
             textBoxIssuingAuthority.TabIndex = 18;
             // 
             // label38
@@ -1883,9 +1899,9 @@
             label38.AutoSize = true;
             label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label38.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label38.Location = new System.Drawing.Point(3, 65);
+            label38.Location = new System.Drawing.Point(3, 61);
             label38.Name = "label38";
-            label38.Size = new System.Drawing.Size(55, 13);
+            label38.Size = new System.Drawing.Size(69, 17);
             label38.TabIndex = 41;
             label38.Text = "Birth Date";
             // 
@@ -1895,9 +1911,9 @@
             label39.AutoSize = true;
             label39.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label39.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label39.Location = new System.Drawing.Point(3, 13);
+            label39.Location = new System.Drawing.Point(3, 9);
             label39.Name = "label39";
-            label39.Size = new System.Drawing.Size(67, 13);
+            label39.Size = new System.Drawing.Size(85, 17);
             label39.TabIndex = 40;
             label39.Text = "Family Name";
             // 
@@ -1907,9 +1923,9 @@
             label36.AutoSize = true;
             label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
             label36.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            label36.Location = new System.Drawing.Point(3, 221);
+            label36.Location = new System.Drawing.Point(3, 217);
             label36.Name = "label36";
-            label36.Size = new System.Drawing.Size(89, 13);
+            label36.Size = new System.Drawing.Size(111, 17);
             label36.TabIndex = 43;
             label36.Text = "Issuing Authority";
             // 
@@ -1974,9 +1990,9 @@
             // 
             label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label11.AutoSize = true;
-            label11.Location = new System.Drawing.Point(23, 3);
+            label11.Location = new System.Drawing.Point(23, 1);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(63, 13);
+            label11.Size = new System.Drawing.Size(80, 17);
             label11.TabIndex = 1;
             label11.Text = "Detect MRZ";
             // 
@@ -1984,9 +2000,9 @@
             // 
             label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label12.AutoSize = true;
-            label12.Location = new System.Drawing.Point(23, 23);
+            label12.Location = new System.Drawing.Point(23, 21);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(56, 13);
+            label12.Size = new System.Drawing.Size(70, 17);
             label12.TabIndex = 1;
             label12.Text = "Read MRZ";
             // 
@@ -1994,9 +2010,9 @@
             // 
             label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(23, 43);
+            label13.Location = new System.Drawing.Point(23, 41);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(63, 13);
+            label13.Size = new System.Drawing.Size(80, 17);
             label13.TabIndex = 2;
             label13.Text = "Detect Chip";
             // 
@@ -2004,9 +2020,9 @@
             // 
             label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             label14.AutoSize = true;
-            label14.Location = new System.Drawing.Point(23, 63);
+            label14.Location = new System.Drawing.Point(23, 61);
             label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(56, 13);
+            label14.Size = new System.Drawing.Size(70, 17);
             label14.TabIndex = 3;
             label14.Text = "Read Chip";
             // 
@@ -2099,7 +2115,7 @@
             labelSelectIdBoxComAndReader.ForeColor = System.Drawing.SystemColors.ControlDark;
             labelSelectIdBoxComAndReader.Location = new System.Drawing.Point(8, 26);
             labelSelectIdBoxComAndReader.Name = "labelSelectIdBoxComAndReader";
-            labelSelectIdBoxComAndReader.Size = new System.Drawing.Size(170, 13);
+            labelSelectIdBoxComAndReader.Size = new System.Drawing.Size(215, 17);
             labelSelectIdBoxComAndReader.TabIndex = 0;
             labelSelectIdBoxComAndReader.Text = "Select ID BOX COM Port && Reader";
             // 
@@ -2109,13 +2125,12 @@
             comboBoxComPort.FormattingEnabled = true;
             comboBoxComPort.Location = new System.Drawing.Point(8, 42);
             comboBoxComPort.Name = "comboBoxComPort";
-            comboBoxComPort.Size = new System.Drawing.Size(192, 21);
+            comboBoxComPort.Size = new System.Drawing.Size(192, 25);
             comboBoxComPort.TabIndex = 1;
             comboBoxComPort.SelectedIndexChanged += comboBoxComPort_SelectedIndexChanged;
             // 
             // buttonLastLog
             // 
-            buttonLastLog.Enabled = true;
             buttonLastLog.Location = new System.Drawing.Point(8, 145);
             buttonLastLog.Name = "buttonLastLog";
             buttonLastLog.Size = new System.Drawing.Size(192, 22);
@@ -2133,9 +2148,6 @@
             buttonOptions.TabIndex = 1;
             buttonOptions.Text = "Options";
             buttonOptions.UseVisualStyleBackColor = true;
-            // buttonOptions.Click += new System.EventHandler(buttonOptions_Click);
-            // buttonOptions.MouseEnter += buttonOptions_MouseEnter;
-            // buttonOptions.MouseLeave += buttonOptions_MouseLeave;
             // 
             // labelContactlessFwVersion
             // 
@@ -2145,7 +2157,7 @@
             labelContactlessFwVersion.ForeColor = System.Drawing.Color.DimGray;
             labelContactlessFwVersion.Location = new System.Drawing.Point(8, 249);
             labelContactlessFwVersion.Name = "labelContactlessFwVersion";
-            labelContactlessFwVersion.Size = new System.Drawing.Size(44, 13);
+            labelContactlessFwVersion.Size = new System.Drawing.Size(57, 17);
             labelContactlessFwVersion.TabIndex = 9;
             labelContactlessFwVersion.Text = "FW CTL";
             // 
@@ -2157,7 +2169,7 @@
             labelIdBoxSerialNumber.ForeColor = System.Drawing.Color.DimGray;
             labelIdBoxSerialNumber.Location = new System.Drawing.Point(8, 211);
             labelIdBoxSerialNumber.Name = "labelIdBoxSerialNumber";
-            labelIdBoxSerialNumber.Size = new System.Drawing.Size(24, 13);
+            labelIdBoxSerialNumber.Size = new System.Drawing.Size(30, 17);
             labelIdBoxSerialNumber.TabIndex = 7;
             labelIdBoxSerialNumber.Text = "S/N";
             // 
@@ -2169,7 +2181,7 @@
             labelScannerFwVersion.ForeColor = System.Drawing.Color.DimGray;
             labelScannerFwVersion.Location = new System.Drawing.Point(8, 196);
             labelScannerFwVersion.Name = "labelScannerFwVersion";
-            labelScannerFwVersion.Size = new System.Drawing.Size(48, 13);
+            labelScannerFwVersion.Size = new System.Drawing.Size(61, 17);
             labelScannerFwVersion.TabIndex = 6;
             labelScannerFwVersion.Text = "FW OCR";
             // 
@@ -2203,7 +2215,7 @@
             labelElyMrtdDllVersion.ForeColor = System.Drawing.Color.DimGray;
             labelElyMrtdDllVersion.Location = new System.Drawing.Point(8, 173);
             labelElyMrtdDllVersion.Name = "labelElyMrtdDllVersion";
-            labelElyMrtdDllVersion.Size = new System.Drawing.Size(24, 13);
+            labelElyMrtdDllVersion.Size = new System.Drawing.Size(32, 17);
             labelElyMrtdDllVersion.TabIndex = 13;
             labelElyMrtdDllVersion.Text = "DLL";
             // 
@@ -2213,7 +2225,7 @@
             comboBoxCcidReaders.FormattingEnabled = true;
             comboBoxCcidReaders.Location = new System.Drawing.Point(8, 69);
             comboBoxCcidReaders.Name = "comboBoxCcidReaders";
-            comboBoxCcidReaders.Size = new System.Drawing.Size(192, 21);
+            comboBoxCcidReaders.Size = new System.Drawing.Size(192, 25);
             comboBoxCcidReaders.TabIndex = 2;
             comboBoxCcidReaders.SelectedIndexChanged += comboBoxCcidReaders_SelectedIndexChanged;
             comboBoxCcidReaders.Click += comboBoxCcidReaders_Click;
@@ -2225,7 +2237,7 @@
             labelContactlessDriver.ForeColor = System.Drawing.Color.DimGray;
             labelContactlessDriver.Location = new System.Drawing.Point(8, 234);
             labelContactlessDriver.Name = "labelContactlessDriver";
-            labelContactlessDriver.Size = new System.Drawing.Size(27, 13);
+            labelContactlessDriver.Size = new System.Drawing.Size(35, 17);
             labelContactlessDriver.TabIndex = 8;
             labelContactlessDriver.Text = "DRV";
             // 
@@ -2236,7 +2248,7 @@
             labelIdBoxProductNumber.ForeColor = System.Drawing.Color.DimGray;
             labelIdBoxProductNumber.Location = new System.Drawing.Point(125, 211);
             labelIdBoxProductNumber.Name = "labelIdBoxProductNumber";
-            labelIdBoxProductNumber.Size = new System.Drawing.Size(24, 13);
+            labelIdBoxProductNumber.Size = new System.Drawing.Size(30, 17);
             labelIdBoxProductNumber.TabIndex = 12;
             labelIdBoxProductNumber.Text = "P/N";
             // 
@@ -2247,13 +2259,13 @@
             labelScannerNnaVersion.ForeColor = System.Drawing.Color.DimGray;
             labelScannerNnaVersion.Location = new System.Drawing.Point(125, 196);
             labelScannerNnaVersion.Name = "labelScannerNnaVersion";
-            labelScannerNnaVersion.Size = new System.Drawing.Size(28, 13);
+            labelScannerNnaVersion.Size = new System.Drawing.Size(34, 17);
             labelScannerNnaVersion.TabIndex = 11;
             labelScannerNnaVersion.Text = "NNA";
             // 
-            // MainForm
+            // MRZForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             ClientSize = new System.Drawing.Size(808, 639);
             Controls.Add(textBoxMrz);
@@ -2264,11 +2276,11 @@
             DoubleBuffered = true;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            Name = "MainForm";
+            Name = "MRZForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Lector Grupo Santoro";
-            Load += MainForm_Load;
-            MouseEnter += MainForm_MouseEnter;
+            Load += MRZForm_Load;
+            MouseEnter += MRZForm_MouseEnter;
             tabControl1.ResumeLayout(false);
             tabPageID.ResumeLayout(false);
             groupBoxAntenna.ResumeLayout(false);
@@ -2512,7 +2524,9 @@
         private System.Windows.Forms.Label labelElyMrtdDllVersion;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonExportExcel;
+        private System.Windows.Forms.Button buttonExportJson;
         private System.Windows.Forms.CheckedListBox comboBoxFields;
+        
     }
 }
 

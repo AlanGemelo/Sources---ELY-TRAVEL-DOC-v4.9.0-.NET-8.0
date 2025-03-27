@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-
 namespace ELY_TRAVEL_DOC
 {
     static class Program
@@ -12,7 +11,7 @@ namespace ELY_TRAVEL_DOC
         [STAThread]
         static void Main()
         {
-            MainForm form = null;
+            MRZForm form = null;
             try
             {
                 Application.EnableVisualStyles();
@@ -23,7 +22,8 @@ namespace ELY_TRAVEL_DOC
                     && File.Exists("Wsq2Bmp.dll")
                     && File.Exists("LibUsbDotNet.LibUsbDotNet.dll"))
                 {
-                    Application.Run(form = new MainForm());
+                
+                    Application.Run(form = new MRZForm("es"));
                 }
                 else
                 {

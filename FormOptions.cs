@@ -657,7 +657,7 @@ namespace ELY_TRAVEL_DOC
         {
             var fileName = Path.Combine(GetLogPath(), "Extracted data.csv");
             if (File.Exists(fileName))
-                MainForm.OpenFile(fileName);
+                MRZForm.OpenFile(fileName);
             else
                 MessageBox.Show("The file does not exist yet\nPlease read a travel document first !", "No CSV file generated", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -713,13 +713,13 @@ namespace ELY_TRAVEL_DOC
 
         private void checkboxEmrtdTest_CheckedChanged(object sender, EventArgs e)
         {
-            // Get instance of Mainform
-            MainForm mainform = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-            if (mainform == null)
+            // Get instance of MRZForm
+            MRZForm MRZForm = Application.OpenForms.OfType<MRZForm>().FirstOrDefault();
+            if (MRZForm == null)
                 return;
 
             // Start or stop the eMRTD test loop
-            mainform.SetEmrtdTest(checkboxEmrtdTest.Checked);
+            MRZForm.SetEmrtdTest(checkboxEmrtdTest.Checked);
         }
         #endregion
 

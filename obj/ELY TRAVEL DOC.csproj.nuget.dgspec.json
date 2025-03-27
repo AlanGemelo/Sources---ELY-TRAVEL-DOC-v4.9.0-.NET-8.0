@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gemelo\\Desktop\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj": {}
+    "C:\\Users\\gemelo\\Turoriales\\Santoro\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gemelo\\Desktop\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj": {
+    "C:\\Users\\gemelo\\Turoriales\\Santoro\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gemelo\\Desktop\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj",
+        "projectUniqueName": "C:\\Users\\gemelo\\Turoriales\\Santoro\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj",
         "projectName": "ELY TRAVEL DOC",
-        "projectPath": "C:\\Users\\gemelo\\Desktop\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj",
+        "projectPath": "C:\\Users\\gemelo\\Turoriales\\Santoro\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\ELY TRAVEL DOC.csproj",
         "packagesPath": "C:\\Users\\gemelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gemelo\\Desktop\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\obj\\",
+        "outputPath": "C:\\Users\\gemelo\\Turoriales\\Santoro\\Sources - ELY TRAVEL DOC v4.9.0 .NET 8.0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -75,6 +75,10 @@
             "Microsoft.Windows.Compatibility": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -96,7 +100,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
